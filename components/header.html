@@ -1,5 +1,19 @@
+
 <style>
-/* Botão exclusivo da Biblioteca Digital — não herda o botão antigo "Ver Cursos" */
+
+/* =====================================================
+   TAMANHO DAS LETRAS DO MENU PRINCIPAL
+===================================================== */
+
+.site-header-v2 .site-header-v2__nav a {
+    font-size: 13px !important;
+}
+
+/* =====================================================
+   BOTÃO EXCLUSIVO DA BIBLIOTECA DIGITAL
+   Não herda o botão antigo "Ver Cursos"
+===================================================== */
+
 .site-header-v2 .biblioteca-header-btn {
     box-sizing: border-box !important;
     display: inline-flex !important;
@@ -28,11 +42,13 @@
     box-shadow: 0 6px 16px rgba(9, 32, 68, 0.12) !important;
     transition: background .2s ease, transform .2s ease !important;
 }
+
 .site-header-v2 .biblioteca-header-btn:hover,
 .site-header-v2 .biblioteca-header-btn:focus-visible {
     background: #173a73 !important;
     transform: translateY(-1px);
 }
+
 .site-header-v2 .biblioteca-header-btn svg {
     display: block !important;
     width: 19px !important;
@@ -41,12 +57,14 @@
     fill: none !important;
     stroke: #e8be69 !important;
 }
+
 .site-header-v2 .biblioteca-header-btn span {
     display: inline !important;
     color: #fff !important;
     font: inherit !important;
     white-space: nowrap !important;
 }
+
 @media (max-width: 1100px) {
     .site-header-v2 .biblioteca-header-btn {
         min-width: 0 !important;
@@ -56,41 +74,138 @@
         gap: 7px !important;
     }
 }
+
 </style>
+
+<!-- =====================================================
+     CABEÇALHO — APÓSTOLA PATRÍCIA SANTANA
+===================================================== -->
+
 <header class="site-header-v2" id="siteHeader">
+
     <div class="site-header-v2__inner">
+
         <!-- LOGO / IDENTIDADE -->
-        <a class="site-header-v2__brand" href="/" aria-label="Apóstola Patricia Santana - Início">
-            <img class="site-header-v2__symbol" src="logo-patricia.png" alt="Símbolo do Ministério Apóstola Patricia Santana">
+
+        <a
+            class="site-header-v2__brand"
+            href="/"
+            aria-label="Apóstola Patricia Santana - Início"
+        >
+
+            <img
+                class="site-header-v2__symbol"
+                src="logo-patricia.png"
+                alt="Símbolo do Ministério Apóstola Patricia Santana"
+            >
+
             <span class="site-header-v2__wordmark">
-                <span class="site-header-v2__apostola">APÓSTOLA</span>
-                <strong>PATRICIA SANTANA</strong>
-                <span class="site-header-v2__ministry-row">
-                    <span class="site-header-v2__diamond" aria-hidden="true">◇</span>
-                    <small>MINISTÉRIO APOSTÓLICO</small>
-                    <span class="site-header-v2__diamond" aria-hidden="true">◇</span>
+
+                <span class="site-header-v2__apostola">
+                    APÓSTOLA
                 </span>
+
+                <strong>PATRICIA SANTANA</strong>
+
+                <span class="site-header-v2__ministry-row">
+
+                    <span
+                        class="site-header-v2__diamond"
+                        aria-hidden="true"
+                    >
+                        ◇
+                    </span>
+
+                    <small>MINISTÉRIO APOSTÓLICO</small>
+
+                    <span
+                        class="site-header-v2__diamond"
+                        aria-hidden="true"
+                    >
+                        ◇
+                    </span>
+
+                </span>
+
             </span>
+
         </a>
+
+
         <!-- BOTÃO MENU MOBILE -->
-        <button class="site-header-v2__toggle" id="siteMenuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNavigation">
-            <span></span><span></span><span></span>
+
+        <button
+            class="site-header-v2__toggle"
+            id="siteMenuToggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="siteNavigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <!-- MENU -->
-        <nav class="site-header-v2__nav" id="siteNavigation" aria-label="Navegação principal">
-            <a href="/" data-nav="inicio">INÍCIO</a>
-            <a href="/sobre" data-nav="sobre">SOBRE</a>
-            <a href="/cursos" data-nav="cursos">SEMINÁRIOS</a>
-            <a href="/contato" data-nav="contato">CONTATO</a>
-            <a href="/ofertas" data-nav="ofertas">DÍZIMOS E OFERTAS</a>
+
+
+        <!-- MENU PRINCIPAL -->
+
+        <nav
+            class="site-header-v2__nav"
+            id="siteNavigation"
+            aria-label="Navegação principal"
+        >
+
+            <a href="/" data-nav="inicio">
+                INÍCIO
+            </a>
+
+            <a href="/sobre" data-nav="sobre">
+                SOBRE
+            </a>
+
+            <a href="/cursos" data-nav="cursos">
+                SEMINÁRIOS
+            </a>
+
+            <a href="/contato" data-nav="contato">
+                CONTATO
+            </a>
+
+            <a href="/ofertas" data-nav="ofertas">
+                DÍZIMOS E OFERTAS
+            </a>
+
         </nav>
+
+
         <!-- BOTÃO BIBLIOTECA DIGITAL -->
-        <a class="biblioteca-header-btn" href="biblioteca.html" aria-label="Abrir Biblioteca Digital">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <a
+            class="biblioteca-header-btn"
+            href="biblioteca.html"
+            aria-label="Abrir Biblioteca Digital"
+        >
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+
                 <path d="M12 7v14"/>
+
                 <path d="M3 18V4.5A1.5 1.5 0 0 1 4.5 3H8a4 4 0 0 1 4 4 4 4 0 0 1 4-4h3.5A1.5 1.5 0 0 1 21 4.5V18h-5a4 4 0 0 0-4 3 4 4 0 0 0-4-3H3Z"/>
+
             </svg>
+
             <span>Biblioteca Digital</span>
+
         </a>
+
     </div>
+
 </header>
