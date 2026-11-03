@@ -66,6 +66,16 @@
         @media (max-width: 700px) { .pagina-sobre .sobre-mensagem { padding: 52px 18px; } .pagina-sobre .sobre-conteudos { grid-template-columns: 1fr; } .pagina-sobre .sobre-oracao { padding: 18px; } }
     </style>
 
+
+    <!-- Ajuste exclusivo para celular: foto antes da apresentação -->
+    <style>
+      @media (max-width: 700px) {
+        .pagina-sobre .sobre-hero-grid { display: flex !important; flex-direction: column !important; gap: 24px !important; }
+        .pagina-sobre .sobre-hero-grid > .sobre-photo { order: -1 !important; width: min(100%, 330px) !important; margin: 0 auto !important; align-self: center !important; }
+        .pagina-sobre .sobre-hero-grid > div:not(.sobre-photo) { order: 1 !important; width: 100% !important; min-width: 0 !important; }
+        .pagina-sobre .sobre-photo img { display: block; width: 100%; height: auto; }
+      }
+    </style>
 </head>
 
 
