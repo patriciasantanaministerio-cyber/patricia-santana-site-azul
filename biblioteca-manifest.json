@@ -1,0 +1,19 @@
+
+{
+  "name": "Biblioteca Digital | Apóstola Patrícia Santana",
+  "short_name": "Biblioteca Digital",
+  "description": "Biblioteca Digital do Ministério Apóstola Patrícia Santana",
+  "start_url": "/biblioteca.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#102b59",
+  "theme_color": "#102b59",
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
