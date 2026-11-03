@@ -37,6 +37,18 @@
     <!-- RODAPÉ GLOBAL -->
     <link rel="stylesheet" href="css/footer.css?v=5">
 
+
+    <!-- Ajuste exclusivo para celular: foto antes do texto -->
+    <style>
+      @media (max-width: 650px) {
+        .hero .hero-grid { display: flex !important; flex-direction: column !important; gap: 22px !important; }
+        .hero .hero-art { order: -1 !important; width: min(100%, 330px) !important; margin: 0 auto !important; align-self: center !important; }
+        .hero .hero-copy { order: 1 !important; width: 100% !important; min-width: 0 !important; }
+        .hero .hero-art .chrome { max-width: 100% !important; }
+        .hero .hero-art .floating { max-width: 68%; }
+        .hero { padding-top: 24px !important; }
+      }
+    </style>
 </head>
 
 
