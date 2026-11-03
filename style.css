@@ -3988,12 +3988,19 @@ select {
 .photo:has(> img.foto-apostola) > span,
 .photo:has(> img.foto-apostola) > small { display: none; }
 
-/* Fotografia oficial na moldura da pagina inicial */
+
+/* Fotografia oficial da Apóstola */
+.hero-art .photo {
+    background: #e4ebef;
+    overflow: hidden;
+}
+
 .hero-art .photo img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    transform: translateX(35px);
+    transform: none;
 }
+
