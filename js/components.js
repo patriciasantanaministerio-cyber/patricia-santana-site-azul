@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", async function () {
        Independente do cabeçalho e do rodapé
     ========================================================= */
 
-    if (!document.getElementById("bibliotecaFlutuante")) {
+    if (false) {
 
         const estilo = document.createElement("style");
 
