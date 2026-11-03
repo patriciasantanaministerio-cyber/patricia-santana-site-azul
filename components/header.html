@@ -1,3 +1,62 @@
+<style>
+/* Botão exclusivo da Biblioteca Digital — não herda o botão antigo "Ver Cursos" */
+.site-header-v2 .biblioteca-header-btn {
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    gap: 12px !important;
+    width: max-content !important;
+    min-width: 230px !important;
+    max-width: none !important;
+    min-height: 62px !important;
+    padding: 15px 23px !important;
+    border: 1px solid #d9b66d !important;
+    border-radius: 999px !important;
+    background: #102b59 !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    box-shadow: 0 6px 16px rgba(9, 32, 68, 0.12) !important;
+    transition: background .2s ease, transform .2s ease !important;
+}
+.site-header-v2 .biblioteca-header-btn:hover,
+.site-header-v2 .biblioteca-header-btn:focus-visible {
+    background: #173a73 !important;
+    transform: translateY(-1px);
+}
+.site-header-v2 .biblioteca-header-btn svg {
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    flex: 0 0 24px !important;
+    fill: none !important;
+    stroke: #e8be69 !important;
+}
+.site-header-v2 .biblioteca-header-btn span {
+    display: inline !important;
+    color: #fff !important;
+    font: inherit !important;
+    white-space: nowrap !important;
+}
+@media (max-width: 1100px) {
+    .site-header-v2 .biblioteca-header-btn {
+        min-width: 0 !important;
+        min-height: 54px !important;
+        padding: 12px 17px !important;
+        font-size: 13px !important;
+        gap: 9px !important;
+    }
+}
+</style>
 <header class="site-header-v2" id="siteHeader">
     <div class="site-header-v2__inner">
         <!-- LOGO / IDENTIDADE -->
@@ -26,8 +85,11 @@
             <a href="ofertas.html" data-nav="ofertas">DÍZIMOS E OFERTAS</a>
         </nav>
         <!-- BOTÃO BIBLIOTECA DIGITAL -->
-        <a class="site-header-v2__courses" href="biblioteca.html" aria-label="Abrir Biblioteca Digital" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#102b59;color:#fff;border:1px solid #d9b66d;border-radius:999px;padding:12px 22px;text-decoration:none;white-space:nowrap;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#e8be69" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M12 7v14"/><path d="M3 18V4.5A1.5 1.5 0 0 1 4.5 3H8a4 4 0 0 1 4 4 4 4 0 0 1 4-4h3.5A1.5 1.5 0 0 1 21 4.5V18h-5a4 4 0 0 0-4 3 4 4 0 0 0-4-3H3Z"/></svg>
+        <a class="biblioteca-header-btn" href="biblioteca.html" aria-label="Abrir Biblioteca Digital">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 7v14"/>
+                <path d="M3 18V4.5A1.5 1.5 0 0 1 4.5 3H8a4 4 0 0 1 4 4 4 4 0 0 1 4-4h3.5A1.5 1.5 0 0 1 21 4.5V18h-5a4 4 0 0 0-4 3 4 4 0 0 0-4-3H3Z"/>
+            </svg>
             <span>Biblioteca Digital</span>
         </a>
     </div>
