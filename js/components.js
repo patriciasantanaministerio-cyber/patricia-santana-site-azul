@@ -151,146 +151,69 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
     /* =========================================================
-       IDENTIFICAR PÁGINA ATUAL
+       IDENTIFICAR PÁGINA ATUAL (COM OU SEM .HTML)
     ========================================================= */
 
-    const pagina =
-        window.location.pathname
-            .split("/")
-            .pop()
-            .toLowerCase()
-        || "index.html";
+    const pagina = window.location.pathname
+        .replace(/\/+$/, "")
+        .split("/")
+        .pop()
+        .toLowerCase()
+        .replace(/\.html$/, "") || "index";
 
-    const hash =
-        window.location.hash.toLowerCase();
-
+    const hash = window.location.hash.toLowerCase();
 
     /* =========================================================
-       LIMPAR MENU ATIVO
+       DEFINIR ITEM ATIVO DO MENU
     ========================================================= */
 
-    document
-        .querySelectorAll(".site-header-v2__nav a")
-        .forEach(function (link) {
+    const linksMenu = document.querySelectorAll(
+        ".site-header-v2__nav a"
+    );
 
-            link.classList.remove("active");
+    linksMenu.forEach(function (link) {
+        link.classList.remove("active");
+        link.removeAttribute("aria-current");
+    });
 
-        });
+    let secaoAtiva = null;
 
-
-    /* =========================================================
-       DEFINIR ITEM ATIVO
-    ========================================================= */
-
-    let ativo = null;
-
-
-    /* SOBRE */
-
-    if (pagina === "sobre.html") {
-
-        ativo =
-            document.querySelector(
-                '[data-nav="sobre"]'
-            );
-
+    if (pagina === "sobre") {
+        secaoAtiva = "sobre";
+    } else if ([
+        "cursos",
+        "cura-interior",
+        "trono-lilith",
+        "trono-mamon",
+        "batalha-espiritual",
+        "trono-belial"
+    ].includes(pagina)) {
+        secaoAtiva = "cursos";
+    } else if (pagina === "contato") {
+        secaoAtiva = "contato";
+    } else if (pagina === "ofertas") {
+        secaoAtiva = "ofertas";
+    } else if (pagina === "index") {
+        if (hash === "#cursos") {
+            secaoAtiva = "cursos";
+        } else if (hash === "#contato") {
+            secaoAtiva = "contato";
+        } else {
+            secaoAtiva = "inicio";
+        }
     }
 
+    // Biblioteca Digital e outras páginas sem item próprio no menu
+    // não recebem destaque incorreto em "Início".
+    if (secaoAtiva) {
+        const linkAtivo = document.querySelector(
+            '.site-header-v2__nav a[data-nav="' + secaoAtiva + '"]'
+        );
 
-    /* CURSOS */
-
-    else if (
-
-        pagina === "cursos.html" ||
-
-        pagina === "cura-interior.html" ||
-
-        pagina === "trono-lilith.html" ||
-
-        pagina === "trono-mamon.html" ||
-
-        pagina === "batalha-espiritual.html" ||
-
-        pagina === "trono-belial.html"
-
-    ) {
-
-        ativo =
-            document.querySelector(
-                '[data-nav="cursos"]'
-            );
-
-    }
-
-
-    /* CONTATO */
-
-    else if (pagina === "contato.html") {
-
-        ativo =
-            document.querySelector(
-                '[data-nav="contato"]'
-            );
-
-    }
-
-
-    /* DÍZIMOS E OFERTAS */
-
-    else if (pagina === "ofertas.html") {
-
-        ativo =
-            document.querySelector(
-                '[data-nav="ofertas"]'
-            );
-
-    }
-
-
-    /* LINKS DA HOME COM HASH */
-
-    else if (hash === "#cursos") {
-
-        ativo =
-            document.querySelector(
-                '[data-nav="cursos"]'
-            );
-
-    }
-
-    else if (hash === "#contato") {
-
-        ativo =
-            document.querySelector(
-                '[data-nav="contato"]'
-            );
-
-    }
-
-
-    /* INÍCIO */
-
-    else if (
-        pagina !== "biblioteca.html" &&
-        pagina !== "leitor-jejum.html"
-    ) {
-
-        ativo =
-            document.querySelector(
-                '[data-nav="inicio"]'
-            );
-
-    }
-
-
-    /* =========================================================
-       ATIVAR ITEM CORRETO
-    ========================================================= */
-
-    if (ativo) {
-
-        ativo.classList.add("active");
-
+        if (linkAtivo) {
+            linkAtivo.classList.add("active");
+            linkAtivo.setAttribute("aria-current", "page");
+        }
     }
 
     /* =========================================================
