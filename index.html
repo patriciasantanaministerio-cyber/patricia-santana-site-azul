@@ -54,28 +54,33 @@
       .hero .ministerio-destaque p { margin: 0 0 6px; color: #10395b; font-family: 'Montserrat', sans-serif; font-size: clamp(13px, 1.15vw, 16px); line-height: 1.6; font-weight: 500; }
       .hero .ministerio-destaque strong { display: block; color: #0785ce; font-family: 'Montserrat', sans-serif; font-size: clamp(17px, 1.55vw, 22px); line-height: 1.4; font-weight: 700; }
 
+      /* Assinatura discreta, totalmente dentro da moldura da foto */
+      .hero .hero-art { position: relative; }
+      .hero .hero-art .chrome { position: relative; }
       /* Substitui somente o texto do selo flutuante; preserva a foto original */
       .hero .hero-art .floating.assinatura-apostola {
-        box-sizing: border-box; width: max-content; max-width: 82%;
-        padding: 11px 18px 9px; text-align: center;
+        box-sizing: border-box; width: max-content; max-width: 62%;
+         position: absolute; right: 9%; bottom: 7%; left: auto; top: auto;
+         transform: none; z-index: 3;
+        padding: 7px 12px 6px; text-align: center;
         background: rgba(246, 250, 254, .88);
         border: 1px solid rgba(255,255,255,.9);
-        border-radius: 15px; box-shadow: 0 8px 24px rgba(11, 47, 80, .10);
+        border-radius: 11px; box-shadow: 0 5px 14px rgba(11, 47, 80, .08);
         backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
       }
       .hero .hero-art .assinatura-apostola .assinatura-nome {
         display: block; color: #0b3973; font-family: 'Nothing You Could Do', cursive;
-        font-size: clamp(15px, 1.55vw, 23px); font-weight: 400;
-        line-height: 1.35; white-space: nowrap; letter-spacing: -0.05em;
+        font-size: clamp(11px, 1.1vw, 16px); font-weight: 400;
+        line-height: 1.3; white-space: nowrap; letter-spacing: -0.05em;
       }
       .hero .hero-art .assinatura-apostola .assinatura-traco {
-        display: block; height: 2px; width: 80%; margin: 3px auto 0;
+        display: block; height: 1px; width: 72%; margin: 2px auto 0;
         border-radius: 100%; background: linear-gradient(90deg, transparent, #0785ce 20%, #0785ce 80%, transparent);
         transform: rotate(-2deg);
       }
       @media (max-width: 650px) {
-        .hero .hero-art .floating.assinatura-apostola { max-width: 85%; padding: 8px 12px; }
-        .hero .hero-art .assinatura-apostola .assinatura-nome { font-size: clamp(13px, 3.8vw, 18px); }
+        .hero .hero-art .floating.assinatura-apostola { max-width: 70%; right: 7%; bottom: 7%; padding: 6px 9px; }
+        .hero .hero-art .assinatura-apostola .assinatura-nome { font-size: clamp(10px, 2.8vw, 13px); }
       }
     </style>
 </head>
