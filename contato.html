@@ -47,7 +47,40 @@
 
     <link rel="stylesheet" href="css/header.css?v=3">
     <link rel="stylesheet" href="css/footer.css?v=6">
-    <link rel="stylesheet" href="css/contato.css?v=2">
+    <link rel="stylesheet" href="css/contato.css?v=3">
+
+
+    <!-- Imagem da página Contato: substitui somente o painel PS -->
+    <style>
+      .contact-hero .contact-signature.contact-signature--imagem {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 5px !important;
+        box-shadow: 0 16px 42px rgba(10, 43, 80, .15) !important;
+        aspect-ratio: 779 / 489;
+      }
+      .contact-hero .contact-hero-imagem {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        object-fit: cover !important;
+        border-radius: 5px !important;
+      }
+      @media (max-width: 820px) {
+        .contact-hero .contact-signature.contact-signature--imagem {
+          max-width: 650px !important;
+          margin: 0 auto !important;
+        }
+      }
+    </style>
 
 </head>
 
@@ -114,35 +147,14 @@
 
                 <!-- PAINEL VISUAL -->
 
-                <div class="contact-signature">
-
-                    <div class="contact-signature-inner">
-
-                        <span class="signature-small">
-                            MINISTÉRIO APOSTÓLICO
-                        </span>
-
-                        <div class="signature-monogram">
-                            PS
-                        </div>
-
-                        <div class="signature-line"></div>
-
-                        <h2>
-                            Patricia
-                            <span>Santana</span>
-                        </h2>
-
-                        <p>
-                            Batalha Espiritual • Cura • Libertação
-                        </p>
-
-                        <span class="signature-footer">
-                            ENSINO • CURA • RESTAURAÇÃO
-                        </span>
-
-                    </div>
-
+                <div class="contact-signature contact-signature--imagem">
+                    <img
+                        class="contact-hero-imagem"
+                        src="contato-pomba-biblia.jpg"
+                        alt="Pomba branca sobre uma Bíblia aberta, representando fé, ensino, cura e restauração"
+                        loading="eager"
+                        decoding="async"
+                    >
                 </div>
 
 
@@ -569,7 +581,7 @@
          COMPONENTES
     ====================================================== -->
 
-    <script src="js/components.js?v=3"></script>
+    <script src="js/components.js?v=8"></script>
 
 
 
@@ -626,7 +638,7 @@
                 texto += "\nMensagem:\n" + mensagem;
 
 
-                const numero = "5511999999999";
+                const numero = "5514997656818";
 
                 const url =
                     "https://wa.me/" +
