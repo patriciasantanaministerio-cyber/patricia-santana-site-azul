@@ -54,42 +54,54 @@
       .hero .ministerio-destaque p { margin: 0 0 6px; color: #10395b; font-family: 'Montserrat', sans-serif; font-size: clamp(13px, 1.15vw, 16px); line-height: 1.6; font-weight: 500; }
       .hero .ministerio-destaque strong { display: block; color: #0785ce; font-family: 'Montserrat', sans-serif; font-size: clamp(17px, 1.55vw, 22px); line-height: 1.4; font-weight: 700; }
 
-      /* Assinatura pequena e posicionada DENTRO da moldura */
-      .hero .hero-art .chrome { position: relative; }
-      .hero .hero-art .chrome .floating.assinatura-apostola {
-        position: absolute !important;
-        left: auto !important; top: auto !important;
-        right: 4% !important; bottom: 5% !important;
-        transform: none !important; z-index: 5;
+      /* Assinatura abaixo da fotografia, sem etiqueta ou sobreposição */
+      .hero .hero-art {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        min-height: 0;
+      }
+      .hero .hero-art .assinatura-apostola {
+        position: static !important;
+        display: block;
         box-sizing: border-box;
-        width: fit-content !important; max-width: 65% !important;
-        margin: 0 !important; padding: 5px 9px 4px !important;
-        background: rgba(246,250,254,.90);
-        border: 1px solid rgba(255,255,255,.85);
-        border-radius: 9px;
-        box-shadow: 0 3px 9px rgba(11,47,80,.10);
-        backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+        width: min(100%, 420px);
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+        padding: 0 10px 3px !important;
+        transform: none !important;
         text-align: center;
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
       }
-      .hero .hero-art .chrome .assinatura-apostola .assinatura-nome {
-        display: block; color: #0b3973;
+      .hero .hero-art .assinatura-apostola .assinatura-nome {
+        display: block;
         font-family: 'Nothing You Could Do', cursive;
-        font-size: clamp(10px, 1vw, 14px) !important;
-        font-weight: 400; line-height: 1.35;
-        letter-spacing: -0.04em; white-space: normal;
+        font-size: clamp(17px, 1.7vw, 23px);
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: -0.035em;
+        color: #0b3973;
+        white-space: normal;
       }
-      .hero .hero-art .chrome .assinatura-apostola .assinatura-traco {
-        display: block; height: 1px; width: 70%; margin: 2px auto 0;
-        background: linear-gradient(90deg, transparent, #0785ce 20%, #0785ce 80%, transparent);
+      .hero .hero-art .assinatura-apostola .assinatura-traco {
+        display: block;
+        height: 1px;
+        width: 42%;
+        margin: 0 auto;
+        background: linear-gradient(90deg, transparent, #0785ce, transparent);
         transform: rotate(-2deg);
       }
       @media (max-width: 650px) {
-        .hero .hero-art .chrome .floating.assinatura-apostola {
-          right: 4% !important; bottom: 5% !important;
-          max-width: 70% !important; padding: 4px 7px !important;
-        }
-        .hero .hero-art .chrome .assinatura-apostola .assinatura-nome {
-          font-size: clamp(9px, 2.4vw, 12px) !important;
+        .hero .hero-art { gap: 10px; }
+        .hero .hero-art .assinatura-apostola { width: 100%; }
+        .hero .hero-art .assinatura-apostola .assinatura-nome {
+          font-size: clamp(15px, 4.4vw, 19px);
         }
       }
     </style>
@@ -228,10 +240,11 @@
 
                         </div>
 
-                    <div class="floating assinatura-apostola" aria-label="Apóstola Patrícia Santana">
+                    </div>
+
+                    <div class="assinatura-apostola" aria-label="Assinatura estilizada: Apóstola Patrícia Santana">
                         <span class="assinatura-nome">Apóstola Patrícia Santana</span>
                         <span class="assinatura-traco" aria-hidden="true"></span>
-                    </div>
                     </div>
 
                 </div>
