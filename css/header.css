@@ -260,9 +260,9 @@
     align-items: center;
     justify-content: flex-end;
 
-    gap: 20px;
+    gap: 14px;
 
-    transform: translateX(25px);
+    transform: none;
 
     font-family: "Montserrat", Arial, sans-serif !important;
 }
@@ -296,7 +296,7 @@ html body .site-header-v2 .site-header-v2__nav > a {
 
     font-family: "Montserrat", Arial, sans-serif !important;
 
-    font-size: 10px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
     font-style: normal !important;
 
@@ -359,7 +359,7 @@ html body .site-header-v2 .site-header-v2__nav > a.active {
 
     font-family: "Montserrat", Arial, sans-serif !important;
 
-    font-size: 10px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
 
     letter-spacing: 0 !important;
@@ -534,9 +534,9 @@ html body .site-header-v2 .site-header-v2__courses:hover {
 
 
     .site-header-v2 .site-header-v2__nav {
-        gap: 14px;
+        gap: 10px;
 
-        transform: translateX(10px);
+        transform: none;
     }
 
 
@@ -546,7 +546,7 @@ html body .site-header-v2 .site-header-v2__courses:hover {
     html body .site-header-v2 .site-header-v2__nav > a,
     html body .site-header-v2 .site-header-v2__nav > a:hover,
     html body .site-header-v2 .site-header-v2__nav > a.active {
-        font-size: 10px !important;
+        font-size: 14px !important;
         font-weight: 700 !important;
     }
 
@@ -609,7 +609,7 @@ html body .site-header-v2 .site-header-v2__courses:hover {
 
 
     .site-header-v2 .site-header-v2__nav {
-        gap: 12px;
+        gap: 10px;
 
         transform: none;
     }
@@ -618,7 +618,7 @@ html body .site-header-v2 .site-header-v2__courses:hover {
     html body .site-header-v2 .site-header-v2__nav > a,
     html body .site-header-v2 .site-header-v2__nav > a:hover,
     html body .site-header-v2 .site-header-v2__nav > a.active {
-        font-size: 10px !important;
+        font-size: 14px !important;
         font-weight: 700 !important;
     }
 
@@ -633,7 +633,7 @@ html body .site-header-v2 .site-header-v2__courses:hover {
    TABLET / CELULAR
 ========================================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
 
     .site-header-v2 .site-header-v2__inner {
         position: relative;
@@ -973,7 +973,7 @@ html body .site-header-v2 .site-header-v2__courses:hover {
 
 
     .site-header-v2 .site-header-v2__diamond {
-        font-size: 10px !important;
+        font-size: 14px !important;
     }
 
 
