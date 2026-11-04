@@ -73,10 +73,8 @@
       @media (max-width: 700px) {
         .contact-hero-integrated-banner { display: none; }
         .contact-page .contact-hero.contact-hero-integrated {
-          background-image: linear-gradient(180deg, rgba(255,255,255,.97),rgba(235,248,255,.9)), url('contato-banner-integrado.png');
-          background-size: cover;
-          background-position: 60% center;
-          padding: 42px 22px 55px !important;
+          background: linear-gradient(180deg, #ffffff 0%, #f4fbff 55%, #d7f1ff 100%) !important;
+          padding: 38px 22px 0 !important;
         }
         .contact-hero-mobile-content {
           display: block;
@@ -87,6 +85,20 @@
         .contact-hero-mobile-content h1 em { display: block; }
         .contact-hero-mobile-content p { margin-top: 24px; line-height: 1.75; }
         .contact-hero-mobile-content .contact-hero-detail { margin-top: 24px; }
+        .contact-hero-mobile-art {
+          display: block;
+          width: calc(100% + 44px);
+          max-width: none;
+          height: auto;
+          margin: 12px -22px 0;
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+      @media (min-width: 701px) {
+        .contact-hero-mobile-art { display: none; }
+      }
       }
     </style>
 </head>
@@ -129,6 +141,7 @@
                 <p>Para informações sobre cursos, seminários, agenda, inscrições e ministério, escolha abaixo o canal mais conveniente ou envie sua mensagem pelo formulário.</p>
                 <div class="contact-hero-detail"><span></span><strong>APÓSTOLA PATRICIA SANTANA</strong></div>
             </div>
+            <img class="contact-hero-mobile-art" src="contato-arte-mobile.png" alt="Pomba branca sobre uma Bíblia aberta, com luz azul e ondas suaves" loading="eager">
         </section>
 
 
