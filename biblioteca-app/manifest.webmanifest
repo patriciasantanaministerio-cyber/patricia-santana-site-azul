@@ -1,0 +1,17 @@
+{
+  "name": "Biblioteca Digital | Apóstola Patrícia Santana",
+  "short_name": "Biblioteca Digital",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14263f",
+  "theme_color": "#14263f",
+  "icons": [
+    {
+      "src": "../icon-biblioteca.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
