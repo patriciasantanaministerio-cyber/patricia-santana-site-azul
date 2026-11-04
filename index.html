@@ -47,6 +47,31 @@
         .hero .hero-art .floating { max-width: 68%; }
         .hero { padding-top: 24px !important; }
       }
+
+      /* Destaque na apresentação inicial; isolado para não afetar o restante do site */
+      .hero .ministerio-destaque {
+        margin: 22px 0 20px;
+        padding: 16px 19px;
+        border-left: 4px solid #0785ce;
+        background: rgba(255,255,255,.38);
+        border-radius: 0 12px 12px 0;
+      }
+      .hero .ministerio-destaque p {
+        margin: 0 0 6px;
+        color: #10395b;
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(13px, 1.15vw, 16px);
+        line-height: 1.6;
+        font-weight: 500;
+      }
+      .hero .ministerio-destaque strong {
+        display: block;
+        color: #0785ce;
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(17px, 1.55vw, 22px);
+        line-height: 1.4;
+        font-weight: 700;
+      }
     </style>
 </head>
 
@@ -94,6 +119,13 @@
                         </em>
                     </h1>
 
+
+
+                    <!-- DESTAQUE DOS PILARES DO MINISTÉRIO -->
+                    <div class="ministerio-destaque" aria-label="Pilares do Ministério">
+                        <p>O Ministério da Apóstola Patrícia Santana é pautado em</p>
+                        <strong>Libertação, Restauração e Batalha Espiritual em Alto Nível.</strong>
+                    </div>
 
                     <p class="lead">
                         Há 28 anos, a Apóstola Patrícia Santana iniciou sua caminhada com Jesus Cristo. Há 20 anos, dedica-se ao ministério de Libertação, com atuação em Cura Interior, Libertação Sexual e Batalha Espiritual.
