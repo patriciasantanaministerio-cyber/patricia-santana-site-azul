@@ -50,38 +50,45 @@
     <link rel="stylesheet" href="css/contato.css?v=3">
 
 
-    <!-- Imagem da página Contato: substitui somente o painel PS -->
+    <!-- Banner de contato integrado ao fundo, sem cartão ou moldura -->
     <style>
-      .contact-hero .contact-signature.contact-signature--imagem {
-        display: block !important;
-        width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
+      .contact-page .contact-hero.contact-hero-integrated {
+        display: block;
         padding: 0 !important;
-        margin: 0 !important;
-        overflow: hidden !important;
-        background: transparent !important;
-        border: 0 !important;
-        border-radius: 5px !important;
-        box-shadow: 0 16px 42px rgba(10, 43, 80, .15) !important;
-        aspect-ratio: 779 / 489;
+        margin: 0;
+        min-height: 0;
+        background: #eaf6fc;
+        overflow: hidden;
       }
-      .contact-hero .contact-hero-imagem {
-        display: block !important;
-        width: 100% !important;
-        height: 100% !important;
-        max-width: none !important;
-        object-fit: cover !important;
-        border-radius: 5px !important;
+      .contact-hero-integrated-banner {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
       }
-      @media (max-width: 820px) {
-        .contact-hero .contact-signature.contact-signature--imagem {
-          max-width: 650px !important;
-          margin: 0 auto !important;
+      .contact-hero-mobile-content { display: none; }
+      @media (max-width: 700px) {
+        .contact-hero-integrated-banner { display: none; }
+        .contact-page .contact-hero.contact-hero-integrated {
+          background-image: linear-gradient(180deg, rgba(255,255,255,.97),rgba(235,248,255,.9)), url('contato-banner-integrado.png');
+          background-size: cover;
+          background-position: 60% center;
+          padding: 42px 22px 55px !important;
         }
+        .contact-hero-mobile-content {
+          display: block;
+          max-width: 520px;
+          margin: 0 auto;
+        }
+        .contact-hero-mobile-content h1 { font-size: clamp(34px, 8vw, 55px); line-height: 1.12; }
+        .contact-hero-mobile-content h1 em { display: block; }
+        .contact-hero-mobile-content p { margin-top: 24px; line-height: 1.75; }
+        .contact-hero-mobile-content .contact-hero-detail { margin-top: 24px; }
       }
     </style>
-
 </head>
 
 
@@ -107,59 +114,21 @@
              HERO / APRESENTAÇÃO
         ================================================== -->
 
-        <section class="contact-hero">
-
-            <div class="contact-container contact-hero-grid">
-
-
-                <!-- TEXTO -->
-
-                <div class="contact-hero-content">
-
-                    <span class="contact-eyebrow">
-                        FALE CONOSCO
-                    </span>
-
-                    <h1>
-                        Vamos conversar
-                        <em>sobre a sua dúvida.</em>
-                    </h1>
-
-                    <p>
-                        Para informações sobre cursos, seminários,
-                        agenda, inscrições e ministério, escolha
-                        abaixo o canal mais conveniente ou envie
-                        sua mensagem pelo formulário.
-                    </p>
-
-                    <div class="contact-hero-detail">
-
-                        <span></span>
-
-                        <strong>
-                            APÓSTOLA PATRICIA SANTANA
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PAINEL VISUAL -->
-
-                <div class="contact-signature contact-signature--imagem">
-                    <img
-                        class="contact-hero-imagem"
-                        src="contato-pomba-biblia.jpg"
-                        alt="Pomba branca sobre uma Bíblia aberta, representando fé, ensino, cura e restauração"
-                        loading="eager"
-                        decoding="async"
-                    >
-                </div>
-
-
+        <section class="contact-hero contact-hero-integrated" aria-label="Fale conosco — Apóstola Patricia Santana">
+            <!-- Banner integrado, com os textos e a arte no mesmo fundo -->
+            <img
+                class="contact-hero-integrated-banner"
+                src="contato-banner-integrado.png"
+                alt="Fale conosco. Vamos conversar sobre a sua dúvida. Para informações sobre cursos, seminários, agenda, inscrições e ministério, escolha abaixo o canal mais conveniente ou envie sua mensagem pelo formulário. Apóstola Patricia Santana. Pomba branca sobre a Bíblia aberta. Ensino, cura, restauração e libertação."
+                fetchpriority="high"
+            >
+            <!-- Versão acessível e legível para telas pequenas -->
+            <div class="contact-hero-mobile-content">
+                <span class="contact-eyebrow">FALE CONOSCO</span>
+                <h1>Vamos conversar <em>sobre a sua dúvida.</em></h1>
+                <p>Para informações sobre cursos, seminários, agenda, inscrições e ministério, escolha abaixo o canal mais conveniente ou envie sua mensagem pelo formulário.</p>
+                <div class="contact-hero-detail"><span></span><strong>APÓSTOLA PATRICIA SANTANA</strong></div>
             </div>
-
         </section>
 
 
@@ -581,7 +550,7 @@
          COMPONENTES
     ====================================================== -->
 
-    <script src="js/components.js?v=8"></script>
+    <script src="js/components.js?v=3"></script>
 
 
 
