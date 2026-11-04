@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Montserrat:wght@400;500;600;700&family=Nothing+You+Could+Do&display=swap"
         rel="stylesheet"
     >
 
@@ -48,29 +48,34 @@
         .hero { padding-top: 24px !important; }
       }
 
-      /* Destaque na apresentação inicial; isolado para não afetar o restante do site */
-      .hero .ministerio-destaque {
-        margin: 22px 0 20px;
-        padding: 16px 19px;
-        border-left: 4px solid #0785ce;
-        background: rgba(255,255,255,.38);
-        border-radius: 0 12px 12px 0;
+      /* Destaque integrado ao fundo, sem caixa */
+      .hero .ministerio-destaque { margin: 20px 0 22px; padding: 0; border: 0; background: transparent; border-radius: 0; }
+      .hero .ministerio-destaque::before { content: ""; display: block; width: 55px; height: 3px; border-radius: 3px; background: #0785ce; margin-bottom: 16px; }
+      .hero .ministerio-destaque p { margin: 0 0 6px; color: #10395b; font-family: 'Montserrat', sans-serif; font-size: clamp(13px, 1.15vw, 16px); line-height: 1.6; font-weight: 500; }
+      .hero .ministerio-destaque strong { display: block; color: #0785ce; font-family: 'Montserrat', sans-serif; font-size: clamp(17px, 1.55vw, 22px); line-height: 1.4; font-weight: 700; }
+
+      /* Substitui somente o texto do selo flutuante; preserva a foto original */
+      .hero .hero-art .floating.assinatura-apostola {
+        box-sizing: border-box; width: max-content; max-width: 82%;
+        padding: 11px 18px 9px; text-align: center;
+        background: rgba(246, 250, 254, .88);
+        border: 1px solid rgba(255,255,255,.9);
+        border-radius: 15px; box-shadow: 0 8px 24px rgba(11, 47, 80, .10);
+        backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
       }
-      .hero .ministerio-destaque p {
-        margin: 0 0 6px;
-        color: #10395b;
-        font-family: 'Montserrat', sans-serif;
-        font-size: clamp(13px, 1.15vw, 16px);
-        line-height: 1.6;
-        font-weight: 500;
+      .hero .hero-art .assinatura-apostola .assinatura-nome {
+        display: block; color: #0b3973; font-family: 'Nothing You Could Do', cursive;
+        font-size: clamp(15px, 1.55vw, 23px); font-weight: 400;
+        line-height: 1.35; white-space: nowrap; letter-spacing: -0.05em;
       }
-      .hero .ministerio-destaque strong {
-        display: block;
-        color: #0785ce;
-        font-family: 'Montserrat', sans-serif;
-        font-size: clamp(17px, 1.55vw, 22px);
-        line-height: 1.4;
-        font-weight: 700;
+      .hero .hero-art .assinatura-apostola .assinatura-traco {
+        display: block; height: 2px; width: 80%; margin: 3px auto 0;
+        border-radius: 100%; background: linear-gradient(90deg, transparent, #0785ce 20%, #0785ce 80%, transparent);
+        transform: rotate(-2deg);
+      }
+      @media (max-width: 650px) {
+        .hero .hero-art .floating.assinatura-apostola { max-width: 85%; padding: 8px 12px; }
+        .hero .hero-art .assinatura-apostola .assinatura-nome { font-size: clamp(13px, 3.8vw, 18px); }
       }
     </style>
 </head>
@@ -211,17 +216,9 @@
                     </div>
 
 
-                    <div class="floating">
-
-                        <small>
-                            ESPECIALIDADE
-                        </small>
-
-                        <strong>
-                            Batalha Espiritual<br>
-                            de Alto Nível
-                        </strong>
-
+                    <div class="floating assinatura-apostola" aria-label="Apóstola Patrícia Santana">
+                        <span class="assinatura-nome">Apóstola Patrícia Santana</span>
+                        <span class="assinatura-traco" aria-hidden="true"></span>
                     </div>
 
                 </div>
