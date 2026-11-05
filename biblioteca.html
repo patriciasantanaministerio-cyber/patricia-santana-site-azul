@@ -58,6 +58,25 @@ body{font-family:Montserrat,Arial,sans-serif}
 @media(max-width:600px){.biblioteca-container{padding:10px 10px 45px}.app-header{padding:13px 12px}.app-brand strong{font-size:13px}.app-brand small{font-size:8px}.app-home{font-size:11px;padding:9px}.app-home span{display:none}.biblioteca-menu{padding:48px 6px 30px}.menu-opcoes{grid-template-columns:1fr;gap:14px;margin-top:26px}.menu-opcao{min-height:175px;padding:22px 15px}}
 @media(prefers-reduced-motion:reduce){.menu-opcao{transition:none!important}}
 
+
+/* Página inicial da Biblioteca: destaque e versículo */
+.biblioteca-menu{padding-top:50px;padding-bottom:36px}
+.menu-opcoes{margin-top:26px;margin-bottom:30px}
+.menu-opcao{min-height:185px;padding:22px 16px;transition:transform .2s ease,box-shadow .2s ease}
+.home-feature{max-width:850px;margin:0 auto;display:grid;grid-template-columns:165px minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid #dfe6f0;border-radius:16px;padding:18px 24px;text-align:left;box-shadow:0 10px 30px #102b590b}
+.home-feature-cover{display:flex;align-items:center;justify-content:center;min-width:0;background:#0f2e56;border-radius:10px;padding:10px}
+.home-feature-cover img{display:block;max-height:180px;width:100%;object-fit:contain;border-radius:4px}
+.home-feature-eyebrow{font-size:10px;letter-spacing:1.3px;color:#a77836;font-weight:800}
+.home-feature-copy h2{font:600 34px/1.1 'Cormorant Garamond',serif;color:#102b59;margin:10px 0}
+.home-feature-copy p{font-size:12px;line-height:1.75;color:#52627b;margin:0 0 17px}
+.home-feature-link{display:inline-flex;align-items:center;justify-content:center;background:#102b59;color:white;padding:12px 17px;border-radius:8px;font-size:11px;font-weight:700;text-decoration:none;min-height:44px}
+.home-feature-link:hover,.home-feature-link:focus-visible{background:#1b4b82}
+.home-verse{margin:27px auto 0;text-align:center;color:#102b59}
+.home-verse p{font:italic 500 clamp(18px,2.2vw,23px)/1.3 'Cormorant Garamond',serif;margin:0 0 6px}
+.home-verse span{font-size:10px;letter-spacing:1.7px;color:#a77836;font-weight:700}
+@media(max-width:600px){.biblioteca-menu{padding:30px 3px 20px}.biblioteca-menu h1{font-size:clamp(35px,10vw,46px)}.menu-opcoes{margin:20px auto 24px}.menu-opcao{min-height:145px;padding:18px 12px;gap:8px}.menu-icone{font-size:28px}.menu-opcao strong{font-size:16px}.home-feature{grid-template-columns:100px minmax(0,1fr);gap:12px;padding:12px;border-radius:12px}.home-feature-cover{padding:6px}.home-feature-cover img{max-height:155px}.home-feature-copy h2{font-size:26px;margin:6px 0}.home-feature-copy p{font-size:10px;line-height:1.55;margin-bottom:9px}.home-feature-eyebrow{font-size:8px;letter-spacing:.5px}.home-feature-link{font-size:10px;padding:9px 10px;min-height:38px}.home-verse{margin-top:22px}.home-verse p{font-size:19px}}
+@media(max-width:360px){.home-feature{grid-template-columns:85px minmax(0,1fr)}.home-feature-copy h2{font-size:23px}}
+
 </style>
 </head>
 <body>
@@ -70,13 +89,23 @@ body{font-family:Montserrat,Arial,sans-serif}
   <a class="app-home" href="https://www.apostolapatriciasantana.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir site oficial em nova aba">⌂ <span>Site oficial</span> ↗</a>
 </header>
 <section id="biblioteca-menu" class="biblioteca-menu" aria-label="Escolha o conteúdo">
-  <p class="menu-kicker">BEM-VINDO À BIBLIOTECA DIGITAL</p>
-  <h1>O que deseja explorar?</h1>
-  <p class="menu-desc">Selecione uma das opções para acessar os conteúdos do ministério.</p>
+  <p class="menu-kicker">CONHECIMENTO · FÉ · TRANSFORMAÇÃO</p>
+  <h1>Sua jornada começa aqui</h1>
+  <p class="menu-desc">Escolha como deseja aprofundar sua caminhada espiritual.</p>
   <div class="menu-opcoes">
     <button type="button" onclick="abrirBiblioteca('gratuitos')" class="menu-opcao"><span class="menu-icone">▤</span><strong>Materiais Gratuitos</strong><small>Leituras e conteúdos para sua caminhada espiritual</small><span class="menu-arrow">Explorar →</span></button>
     <button type="button" onclick="abrirBiblioteca('pagos')" class="menu-opcao"><span class="menu-icone">◇</span><strong>Seminários Pagos</strong><small>Conheça os seminários e saiba como se inscrever</small><span class="menu-arrow">Conhecer →</span></button>
   </div>
+  <section class="home-feature" aria-label="Material gratuito em destaque">
+    <div class="home-feature-cover"><img src="capa-21-dias-jejum.png" alt="Capa original do material 21 Dias de Jejum" loading="eager"></div>
+    <div class="home-feature-copy">
+      <span class="home-feature-eyebrow">✦ MATERIAL GRATUITO EM DESTAQUE</span>
+      <h2>21 Dias de Jejum</h2>
+      <p>Foco no Arrependimento e Alinhamento. Um convite para aprofundar sua caminhada de fé, no seu próprio ritmo.</p>
+      <a href="leitor-jejum.html" class="home-feature-link">Começar a leitura →</a>
+    </div>
+  </section>
+  <div class="home-verse"><p>“A fé vem pelo ouvir, e o ouvir pela palavra de Deus.”</p><span>ROMANOS 10:17</span></div>
 </section>
 <div id="biblioteca-conteudo" hidden>
   <button type="button" class="voltar-menu" onclick="abrirBiblioteca('menu')">← Voltar à Biblioteca</button>
