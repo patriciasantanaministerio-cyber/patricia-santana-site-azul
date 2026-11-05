@@ -7,43 +7,44 @@
 <meta name="apple-mobile-web-app-title" content="Biblioteca Digital">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="manifest" href="/biblioteca-manifest.json">
-
-<link rel="icon" type="image/png" sizes="512x512" href="/icon-biblioteca.png?v=3">
-<link rel="apple-touch-icon" href="/icon-biblioteca.png?v=3">
-
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png?v=2">
+<link rel="apple-touch-icon" href="/icon-512.png?v=2">
 <title>Biblioteca Digital | Apóstola Patrícia Santana</title>
 <meta name="description" content="Biblioteca Digital de Seminários da Apóstola Patrícia Santana: materiais gratuitos e seminários.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/header.css?v=5">
+<link rel="stylesheet" href="css/footer.css?v=6">
 <style>
 .biblioteca{background:#f7f8fc;color:#26344c;font-family:Montserrat,Arial,sans-serif;min-height:80vh}.biblioteca *{box-sizing:border-box}.biblioteca-hero{background:linear-gradient(135deg,#081b3b,#173a73);color:#fff;text-align:center;padding:85px 20px}.biblioteca-hero .eyebrow{color:#e3c58c;font-size:11px;letter-spacing:3px;font-weight:700}.biblioteca-hero h1{font:600 clamp(42px,6vw,68px)/1.1 'Cormorant Garamond',serif;margin:16px auto;max-width:800px}.biblioteca-hero h1 em{color:#e3c58c}.biblioteca-hero p{max-width:650px;margin:auto;font-size:14px;line-height:1.9;color:#e3e9f4}.biblioteca-container{max-width:1150px;margin:auto;padding:60px 20px 85px}.section-title{margin-bottom:27px}.section-title span{color:#9d7636;font-size:11px;letter-spacing:2px;font-weight:800}.section-title h2{font:600 clamp(34px,4vw,47px) 'Cormorant Garamond',serif;color:#102b59;margin:8px 0}.section-title p{font-size:13px;line-height:1.8}.library-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-bottom:64px}.library-card{background:#fff;border:1px solid #e7eaf0;border-radius:16px;padding:27px;box-shadow:0 10px 30px #0a20440d;display:flex;flex-direction:column;gap:14px}.library-card.featured{border:1px solid #e1d1b1;padding:0;overflow:hidden;display:grid;grid-template-columns:minmax(210px,330px) 1fr;gap:0;box-shadow:0 18px 50px #0a20441a;background:linear-gradient(120deg,#fff,#fbf7ef)}
 .book-art{padding:24px;background:linear-gradient(145deg,#0a234b,#163e78);display:flex;align-items:center;justify-content:center;position:relative}.book-art:before{content:"";position:absolute;inset:12px;border:1px solid #d8b77880;border-radius:10px;pointer-events:none}.book-art img{width:100%;max-width:255px;max-height:380px;object-fit:contain;filter:drop-shadow(0 14px 16px #0007);border-radius:3px}.book-info{padding:35px 34px;display:flex;flex-direction:column;justify-content:center;gap:16px}.book-info .kicker{font-size:10px;letter-spacing:2px;color:#96713c;font-weight:800}.book-info h3{font-size:clamp(35px,4vw,49px);line-height:1.06}.book-info .lead{font-size:14px;line-height:1.95;color:#4b5770}.book-details{display:flex;flex-wrap:wrap;gap:10px}.book-details span{border:1px solid #e6d8bd;border-radius:99px;padding:8px 12px;font-size:11px;color:#6c593d;font-weight:700}.book-info .buttons a{background:#b58a47;color:#101f3a;transition:transform .2s,background .2s}.book-info .buttons a:hover{background:#d6b574;transform:translateY(-2px)}.book-info .buttons a.alt{background:#102b59;color:#fff}.book-info .buttons a.alt:hover{background:#1c477f}
 @media(max-width:740px){.library-card.featured{grid-template-columns:1fr}.book-art{padding:22px}.book-art img{max-width:200px;max-height:290px}.book-info{padding:27px 22px}.book-info h3{font-size:39px}}.library-card .symbol{font-size:32px}.library-card h3{font:600 29px/1.14 'Cormorant Garamond',serif;color:#102b59;margin:0}.library-card p{font-size:13px;line-height:1.85;flex:1;margin:0}.selo{align-self:flex-start;background:#eaf4ec;color:#24663b;padding:7px 12px;border-radius:30px;font-size:10px;font-weight:800}.selo.paid{background:#fff5e5;color:#8a6229}.buttons{display:flex;flex-wrap:wrap;gap:9px;margin-top:9px}.buttons a{display:inline-flex;align-items:center;justify-content:center;background:#102b59;color:white;text-decoration:none;padding:13px 16px;border-radius:8px;font:700 12px Montserrat,Arial,sans-serif;min-height:44px}.buttons a.alt{background:#f0e4d0;color:#102b59}.notice{background:#edf1f8;border-left:4px solid #c6a15c;padding:24px;border-radius:8px;font-size:13px;line-height:1.9}.notice strong{color:#102b59}.notice a{color:#102b59;font-weight:700}@media(max-width:600px){.biblioteca-hero{padding:65px 18px}.biblioteca-container{padding:40px 16px 60px}.library-card{padding:23px}.buttons{flex-direction:column}.buttons a{width:100%}}
 /* Botão de instalação e instruções, isolados do restante do site */
 .biblioteca-install{margin:28px auto 0;display:flex;justify-content:center}.biblioteca-install-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;min-height:50px;border:1px solid #ead5a6;border-radius:999px;background:#c5a365;color:#102b59;font:700 13px Montserrat,Arial,sans-serif;cursor:pointer;box-shadow:0 8px 22px #0003;transition:background .2s,transform .2s}.biblioteca-install-button:hover{background:#e3c58c;transform:translateY(-2px)}.biblioteca-install-button:focus-visible,.biblioteca-close:focus-visible{outline:3px solid #e3c58c;outline-offset:3px}.biblioteca-install-button svg{width:19px;height:19px;flex:none}.biblioteca-dialog{border:0;border-radius:18px;padding:0;width:min(92vw,430px);max-height:85vh;box-shadow:0 20px 70px #0006;color:#26344c;font-family:Montserrat,Arial,sans-serif}.biblioteca-dialog::backdrop{background:#06142bba}.biblioteca-dialog-inner{padding:28px}.biblioteca-dialog h2{font:600 32px/1.1 'Cormorant Garamond',serif;color:#102b59;margin:0 0 14px}.biblioteca-dialog p,.biblioteca-dialog li{font-size:13px;line-height:1.8}.biblioteca-dialog ol{padding-left:22px}.biblioteca-close{display:block;margin:20px 0 0 auto;border:0;border-radius:8px;background:#102b59;color:#fff;padding:11px 22px;font:700 12px Montserrat,Arial,sans-serif;cursor:pointer}
-/* Navegação minimalista, sem cabeçalho nem rodapé do site */
-.biblioteca-home{position:absolute;top:20px;left:24px;z-index:10;display:inline-flex;align-items:center;gap:9px;padding:10px 17px;border:1px solid rgba(227,197,140,.65);border-radius:999px;color:#fff;background:rgba(8,27,59,.68);text-decoration:none;font:600 13px Montserrat,Arial,sans-serif;transition:background .2s,transform .2s}
-.biblioteca-home:hover{background:#173a73;transform:translateY(-1px)}
-.biblioteca-home:focus-visible{outline:3px solid #e3c58c;outline-offset:3px}
-@media(max-width:600px){.biblioteca-home{top:13px;left:14px;padding:9px 13px}.biblioteca-hero{padding-top:90px}}
 
-/* Banner compacto: mantém a identidade visual e o botão Home */
-.biblioteca-hero{padding:48px 20px 42px}
-.biblioteca-hero h1{font-size:clamp(36px,4.5vw,54px);line-height:1.08;margin:10px auto 12px;max-width:850px}
-.biblioteca-hero p{font-size:13px;line-height:1.65}
-.biblioteca-install{margin-top:20px}
-.biblioteca-install-button{min-height:44px;padding:11px 20px}
-@media(max-width:600px){
- .biblioteca-hero{padding:76px 18px 35px}
- .biblioteca-hero h1{font-size:clamp(34px,8vw,44px);margin:10px auto}
- .biblioteca-install{margin-top:18px}
-}
+/* Seminários: cinco cartões lado a lado em telas grandes */
+.seminarios-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-bottom:64px}
+.seminarios-grid .seminario-card{min-width:0;padding:13px;gap:10px}
+.seminario-capa{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;background:#e8eef6}
+.seminarios-grid .seminario-card h3{font-size:clamp(19px,2vw,25px);line-height:1.12}
+.seminarios-grid .seminario-card p{font-size:11px;line-height:1.6}
+.seminarios-grid .selo{font-size:9px;padding:6px 9px}
+.seminarios-grid .buttons{margin-top:auto}
+.seminarios-grid .buttons a{width:100%;padding:10px 6px;font-size:10px;text-align:center}
+@media(max-width:850px){.seminarios-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.seminarios-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.seminarios-grid .seminario-card{padding:10px;gap:8px}
+.seminarios-grid .seminario-card h3{font-size:20px}
+.seminarios-grid .seminario-card p{font-size:10px}
+.seminarios-grid .buttons{flex-direction:column}
+.seminarios-grid .buttons a{font-size:10px;min-height:40px}}
+
 </style>
 </head>
 <body>
-<a class="biblioteca-home" href="https://www.apostolapatriciasantana.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir a página inicial do site oficial em outra aba"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-8h6v8"/></svg><span>Home</span></a>
+<div id="site-header-slot"></div>
 <main class="biblioteca">
 <section class="biblioteca-hero">
 <div class="eyebrow">FORMAÇÃO DE DISCÍPULOS</div>
@@ -53,12 +54,53 @@
 </section>
 <div class="biblioteca-container">
 <section aria-labelledby="free"><div class="section-title"><span>ACESSO LIVRE</span><h2 id="free">Materiais gratuitos</h2><p>Um convite para aprofundar sua caminhada espiritual. Escolha um material, leia no seu ritmo e volte sempre que desejar.</p></div><div class="library-grid"><article class="library-card featured"><div class="book-art"><img src="capa-21-dias-jejum.png" alt="Capa original do material 21 Dias de Jejum — Foco no Arrependimento e Alinhamento" loading="lazy"></div><div class="book-info"><span class="selo">GRATUITO · DISPONÍVEL</span><span class="kicker">UMA JORNADA DE FÉ E REFLEXÃO</span><h3>21 Dias de Jejum</h3><p class="lead">Foco no Arrependimento e Alinhamento. Reserve um momento para a Palavra, a oração e o exame pessoal. Avance em cada página no seu próprio ritmo e retome a leitura quando desejar.</p><div class="book-details"><span>📖 Leitura interativa</span><span>✦ 7 páginas</span><span>♡ Acesso gratuito</span></div><div class="buttons"><a href="leitor-jejum.html">📖 Começar a leitura</a><a class="alt" href="21-dias-de-jejum.pdf" download>↓ Baixar PDF</a></div></div></article></div></section>
-<section aria-labelledby="paid"><div class="section-title"><span>FORMAÇÃO E APROFUNDAMENTO</span><h2 id="paid">Seminários com inscrição</h2><p>Conheça os temas disponíveis. Os materiais de acesso restrito serão liberados individualmente após a confirmação da inscrição.</p></div><div class="library-grid"><article class="library-card"><div class="symbol">🔒</div><span class="selo paid">ACESSO RESTRITO</span><h3>Cura Interior</h3><p>Restauração emocional e fortalecimento espiritual.</p><div class="buttons"><a href="https://www.apostolapatriciasantana.com.br/cura-interior.html" target="_blank" rel="noopener noreferrer">Conhecer seminário</a></div></article><article class="library-card"><div class="symbol">🔒</div><span class="selo paid">ACESSO RESTRITO</span><h3>Trono de Lilith</h3><p>Seminário de aprofundamento na temática de batalha espiritual.</p><div class="buttons"><a href="https://www.apostolapatriciasantana.com.br/trono-lilith.html" target="_blank" rel="noopener noreferrer">Conhecer seminário</a></div></article><article class="library-card"><div class="symbol">🔒</div><span class="selo paid">ACESSO RESTRITO</span><h3>Trono de Mamon</h3><p>Estudo de princípios espirituais relacionados ao tema.</p><div class="buttons"><a href="https://www.apostolapatriciasantana.com.br/trono-mamon.html" target="_blank" rel="noopener noreferrer">Conhecer seminário</a></div></article><article class="library-card"><div class="symbol">🔒</div><span class="selo paid">ACESSO RESTRITO</span><h3>Batalha Espiritual</h3><p>Fundamentos e direcionamentos para o fortalecimento espiritual.</p><div class="buttons"><a href="https://www.apostolapatriciasantana.com.br/batalha-espiritual.html" target="_blank" rel="noopener noreferrer">Conhecer seminário</a></div></article><article class="library-card"><div class="symbol">🔒</div><span class="selo paid">ACESSO RESTRITO</span><h3>Trono de Belial</h3><p>Seminário dedicado ao aprofundamento deste tema dentro da batalha espiritual.</p><div class="buttons"><a href="https://www.apostolapatriciasantana.com.br/trono-belial.html" target="_blank" rel="noopener noreferrer">Conhecer seminário</a></div></article></div></section>
+<section aria-labelledby="paid">
+<div class="section-title">
+<span>FORMAÇÃO E APROFUNDAMENTO</span>
+<h2 id="paid">Seminários com inscrição</h2>
+<p>Conheça os temas disponíveis. Os materiais de acesso restrito serão liberados individualmente após a confirmação da inscrição.</p>
+</div>
+<div class="seminarios-grid"><article class="library-card seminario-card">
+  <img class="seminario-capa" src="/cura-interior.png" alt="Imagem do seminário Cura Interior" loading="lazy">
+  <span class="selo paid">ACESSO RESTRITO</span>
+  <h3>Cura Interior</h3>
+  <p>Restauração emocional e fortalecimento espiritual.</p>
+  <div class="buttons"><a href="cura-interior.html">Conhecer seminário</a></div>
+</article>
+<article class="library-card seminario-card">
+  <img class="seminario-capa" src="/trono-lilith.png" alt="Imagem do seminário Trono de Lilith" loading="lazy">
+  <span class="selo paid">ACESSO RESTRITO</span>
+  <h3>Trono de Lilith</h3>
+  <p>Aprofundamento em batalha espiritual.</p>
+  <div class="buttons"><a href="trono-lilith.html">Conhecer seminário</a></div>
+</article>
+<article class="library-card seminario-card">
+  <img class="seminario-capa" src="/trono-mamon.png" alt="Imagem do seminário Trono de Mamon" loading="lazy">
+  <span class="selo paid">ACESSO RESTRITO</span>
+  <h3>Trono de Mamon</h3>
+  <p>Estudo de princípios espirituais.</p>
+  <div class="buttons"><a href="trono-mamon.html">Conhecer seminário</a></div>
+</article>
+<article class="library-card seminario-card">
+  <img class="seminario-capa" src="/batalha-espiritual.png" alt="Imagem do seminário Batalha Espiritual" loading="lazy">
+  <span class="selo paid">ACESSO RESTRITO</span>
+  <h3>Batalha Espiritual</h3>
+  <p>Fundamentos para o fortalecimento espiritual.</p>
+  <div class="buttons"><a href="batalha-espiritual.html">Conhecer seminário</a></div>
+</article>
+<article class="library-card seminario-card">
+  <img class="seminario-capa" src="/trono-belial.png" alt="Imagem do seminário Trono de Belial" loading="lazy">
+  <span class="selo paid">ACESSO RESTRITO</span>
+  <h3>Trono de Belial</h3>
+  <p>Aprofundamento em batalha espiritual.</p>
+  <div class="buttons"><a href="trono-belial.html">Conhecer seminário</a></div>
+</article></div>
+</section>
 <aside class="notice"><strong>Como acessar os materiais?</strong><p>Os materiais gratuitos estão disponíveis para leitura e download. Os seminários com inscrição terão acesso individual após a confirmação do pagamento; os arquivos restritos não estão publicados nesta página.</p><p>Para informações sobre inscrições, <a href="https://wa.me/5571982862604?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20semin%C3%A1rios." target="_blank" rel="noopener noreferrer">fale com a equipe pelo WhatsApp</a>.</p></aside>
 </div></main>
-
+<div id="site-footer-slot"></div>
 <dialog class="biblioteca-dialog" id="biblioteca-install-dialog" aria-labelledby="biblioteca-install-title"><div class="biblioteca-dialog-inner"><h2 id="biblioteca-install-title">Adicionar Biblioteca Digital</h2><div id="biblioteca-install-instructions" aria-live="polite"></div><button type="button" class="biblioteca-close" id="biblioteca-install-close">Entendi</button></div></dialog>
-
+<script src="js/components.js?v=6"></script>
 <script>
 (function () {
   'use strict';
