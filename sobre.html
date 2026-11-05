@@ -141,6 +141,54 @@
         }
       }
     </style>
+    <!-- Cartões realmente menores em telas de celular -->
+    <style>
+      @media (max-width: 700px) {
+        .pagina-sobre .marcos {
+          display: grid !important;
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          grid-auto-rows: auto !important;
+          gap: 8px !important;
+          justify-items: stretch !important;
+          align-items: start !important;
+        }
+        .pagina-sobre .marcos .marco {
+          width: 100% !important;
+          min-width: 0 !important;
+          min-height: 0 !important;
+          height: auto !important;
+          aspect-ratio: auto !important;
+          padding: 8px 6px 9px !important;
+          gap: 0 !important;
+          align-self: start !important;
+        }
+        .pagina-sobre .marcos .marco-icon {
+          width: 40px !important;
+          height: 40px !important;
+          min-height: 0 !important;
+          margin: 0 auto 5px !important;
+        }
+        .pagina-sobre .marcos .marco-icon svg {
+          width: 21px !important;
+          height: 21px !important;
+        }
+        .pagina-sobre .marcos .marco h3 {
+          font-size: 10px !important;
+          line-height: 1.15 !important;
+          margin: 0 0 4px !important;
+        }
+        .pagina-sobre .marcos .marco p {
+          font-size: 9px !important;
+          line-height: 1.2 !important;
+          margin: 0 !important;
+        }
+        .pagina-sobre .marcos .marco:last-child {
+          grid-column: 1 / -1 !important;
+          width: calc(50% - 4px) !important;
+          justify-self: center !important;
+        }
+      }
+    </style>
 </head>
 
 
