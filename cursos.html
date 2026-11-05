@@ -60,6 +60,18 @@
         href="css/footer.css?v=6"
     >
 
+
+<!-- Anúncio flutuante do Seminário de Cura Interior -->
+<style>
+  .seminario-float {position:fixed;right:22px;bottom:22px;z-index:9000;width:min(310px,calc(100vw - 36px));opacity:0;transform:translateY(14px) scale(.94);pointer-events:none;transition:opacity .42s ease,transform .42s cubic-bezier(.2,.8,.2,1)}
+  .seminario-float.is-visible {opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  .seminario-float a {display:block;overflow:hidden;border-radius:13px;box-shadow:0 12px 42px rgba(0,0,0,.32);background:#102b4b}
+  .seminario-float img {display:block;width:100%;height:auto}
+  .seminario-float button {position:absolute;top:-11px;right:-11px;width:34px;height:34px;border:2px solid white;border-radius:50%;background:#102b4b;color:white;font-size:23px;line-height:1;cursor:pointer;box-shadow:0 3px 10px #0006}
+  .seminario-float a:focus-visible,.seminario-float button:focus-visible {outline:3px solid #f3c76a;outline-offset:3px}
+  @media(max-width:650px){.seminario-float{right:12px;bottom:12px;width:min(205px,calc(100vw - 32px))}}
+  @media(prefers-reduced-motion:reduce){.seminario-float{transition:none;transform:none}}
+</style>
 </head>
 
 
@@ -632,6 +644,27 @@
 <script src="js/components.js?v=6"></script>
 
 
+
+<!-- Divulgação discreta: não bloqueia a navegação -->
+<aside class="seminario-float" id="seminario-float" aria-label="Divulgação do Seminário de Cura Interior" aria-hidden="true">
+  <button type="button" id="seminario-float-close" aria-label="Fechar anúncio">&times;</button>
+  <a href="https://wa.me/5514997656818?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20inscri%C3%A7%C3%A3o%20no%20Semin%C3%A1rio%20de%20Cura%20Interior." target="_blank" rel="noopener noreferrer" aria-label="Solicitar inscrição no Seminário de Cura Interior pelo WhatsApp">
+    <img src="banner-cura-interior-popup.png" alt="Divulgação do Seminário de Cura Interior" loading="lazy">
+  </a>
+</aside>
+<script>
+(function(){
+  var popup=document.getElementById('seminario-float');
+  var close=document.getElementById('seminario-float-close');
+  if(!popup||!close)return;
+  // Respeita o fechamento do anúncio na página inicial nesta sessão.
+  var keys=['popup-cura-interior-v1','popup-cura-interior-float-v1'];
+  function closed(){try{return keys.some(function(k){return sessionStorage.getItem(k)==='closed'})}catch(e){return false}}
+  if(closed())return;
+  var timer=window.setTimeout(function(){if(closed())return;popup.classList.add('is-visible');popup.setAttribute('aria-hidden','false')},1200);
+  close.addEventListener('click',function(){window.clearTimeout(timer);popup.classList.remove('is-visible');popup.setAttribute('aria-hidden','true');try{sessionStorage.setItem('popup-cura-interior-float-v1','closed')}catch(e){}});
+})();
+</script>
 </body>
 
 </html>
