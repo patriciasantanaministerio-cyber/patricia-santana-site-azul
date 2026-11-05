@@ -282,6 +282,21 @@ abrirBiblioteca('menu');
       document.body.style.overflow='hidden';voltar.focus();
     });
   });
+  // Oculta o rodapé apenas na visualização interna do seminário.
+  // As páginas originais do site permanecem intactas.
+  frame.addEventListener('load',()=>{
+    try {
+      const doc=frame.contentDocument;
+      if(!doc || !doc.head) return;
+      const style=doc.createElement('style');
+      style.id='biblioteca-ocultar-rodape';
+      style.textContent='footer, [role=\"contentinfo\"], .site-footer, #footer, #rodape, .rodape { display:none !important; }';
+      doc.head.appendChild(style);
+    } catch(err) {
+      // Acesso ao iframe só é permitido quando a página é do mesmo domínio.
+      console.warn('Não foi possível ocultar o rodapé do seminário.',err);
+    }
+  });
   voltar.addEventListener('click',fechar);
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&janela.classList.contains('ativa'))fechar();});
 })();
