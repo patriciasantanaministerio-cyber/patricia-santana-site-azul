@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="css/contato.css?v=3">
 
 
-    <!-- Banner compacto no computador e versão adaptada ao celular -->
+    <!-- Banner compacto com laterais em degradê para integrar ao fundo -->
     <style>
       .contact-page .contact-hero.contact-hero-integrated {
         display: block;
@@ -58,7 +58,7 @@
         margin: 0;
         min-height: 0;
         overflow: hidden;
-        background: linear-gradient(90deg, #f8fcff 0%, #eaf6fc 44%, #b9e2f7 100%);
+        background: linear-gradient(90deg, #f8fcff 0%, #f2faff 35%, #c6eafa 70%, #b9e2f7 100%);
       }
       /* Reduz a altura sem cortar ou deformar textos e imagens. */
       .contact-hero-integrated-banner {
@@ -70,6 +70,10 @@
         border: 0;
         border-radius: 0;
         box-shadow: none;
+        /* Dissolve suavemente as duas laterais no fundo da seção,
+           sem alterar a proporção nem recortar o conteúdo do banner. */
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 7%, #000 91%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, #000 7%, #000 91%, transparent 100%);
       }
       .contact-hero-mobile-content { display: none; }
       @media (max-width: 700px) {
