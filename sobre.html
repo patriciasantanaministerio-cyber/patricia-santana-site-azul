@@ -98,6 +98,49 @@
         .pagina-sobre .sobre-hero-grid .sobre-btn { order: 8; }
       }
     </style>
+
+    <!-- Ajuste dos cartões da trajetória exclusivamente no celular -->
+    <style>
+      @media (max-width: 700px) {
+        .pagina-sobre .marcos {
+          gap: 12px !important;
+          align-items: stretch;
+        }
+        .pagina-sobre .marcos .marco {
+          box-sizing: border-box;
+          height: auto !important;
+          min-height: 148px !important;
+          padding: 17px 9px 14px !important;
+          margin: 0 !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: flex-start !important;
+          text-align: center !important;
+        }
+        .pagina-sobre .marcos .marco-icon {
+          flex: 0 0 auto;
+          width: 58px !important;
+          height: 58px !important;
+          margin: 8px auto 10px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+        .pagina-sobre .marcos .marco-icon svg {
+          width: 30px !important;
+          height: 30px !important;
+        }
+        .pagina-sobre .marcos .marco h3 {
+          margin: 0 0 7px !important;
+          line-height: 1.25 !important;
+        }
+        .pagina-sobre .marcos .marco p {
+          margin: 0 !important;
+          line-height: 1.45 !important;
+        }
+      }
+    </style>
 </head>
 
 
