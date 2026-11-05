@@ -104,6 +104,24 @@
           font-size: clamp(15px, 4.4vw, 19px);
         }
       }
+
+      /* Assinatura aprovada: dimensões discretas em computador e celular */
+      .hero .hero-art .assinatura-apostola {
+        width: min(280px, 100%) !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        line-height: 0;
+      }
+      .hero .hero-art .assinatura-apostola .assinatura-imagem {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      @media (max-width: 650px) {
+        .hero .hero-art .assinatura-apostola { width: min(220px, 100%) !important; }
+      }
     </style>
 
     <!-- Seção de seminários preservada no HTML, mas oculta na página Início -->
@@ -271,7 +289,7 @@
                     </div>
 
                     <div class="assinatura-apostola">
-                         <img class="assinatura-imagem" src="assinatura-apostola.png" alt="Assinatura da Apóstola Patrícia Santana" loading="eager">
+                         <img class="assinatura-imagem" src="assinatura-apostola-final.png" alt="Assinatura da Apóstola Patrícia Santana" loading="eager">
                      </div>
 
                 </div>
