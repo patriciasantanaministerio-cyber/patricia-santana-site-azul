@@ -121,14 +121,17 @@
     <!-- Pop-up promocional do Seminário de Cura Interior -->
     <style>
       .seminario-popup-overlay { position:fixed; inset:0; z-index:99999; display:none; align-items:center; justify-content:center; padding:24px; background:rgba(3,17,35,.78); box-sizing:border-box; }
-      .seminario-popup-overlay.is-visible { display:flex; }
+      .seminario-popup-overlay.is-visible { display:flex; animation: seminario-fade-in .35s ease-out both; }
       .seminario-popup-dialog { position:relative; width:min(1100px, 94vw); max-height:90vh; }
+       .seminario-popup-overlay.is-visible .seminario-popup-dialog { animation: seminario-zoom-in .42s cubic-bezier(.2,.8,.2,1) both; }
+       @keyframes seminario-fade-in { from { opacity:0; } to { opacity:1; } }
+       @keyframes seminario-zoom-in { from { opacity:0; transform:scale(.94); } to { opacity:1; transform:scale(1); } }
       .seminario-popup-link { display:block; line-height:0; border-radius:14px; overflow:hidden; box-shadow:0 18px 70px rgba(0,0,0,.42); }
       .seminario-popup-link img { display:block; width:100%; max-height:86vh; object-fit:contain; }
       .seminario-popup-close { position:absolute; top:-16px; right:-16px; z-index:2; display:grid; place-items:center; width:40px; height:40px; border:2px solid #fff; border-radius:50%; background:#102b4b; color:#fff; font-size:26px; line-height:1; cursor:pointer; box-shadow:0 3px 12px #0007; }
       .seminario-popup-close:focus-visible, .seminario-popup-link:focus-visible { outline:3px solid #f3c76a; outline-offset:3px; }
       @media(max-width:650px) { .seminario-popup-overlay {padding:12px;} .seminario-popup-dialog {width:96vw;} .seminario-popup-close {right:-4px; top:-20px;} }
-      @media(prefers-reduced-motion:reduce) { .seminario-popup-overlay {scroll-behavior:auto;} }
+      @media(prefers-reduced-motion:reduce) { .seminario-popup-overlay.is-visible, .seminario-popup-overlay.is-visible .seminario-popup-dialog { animation:none; } }
     </style>
 </head>
 
@@ -878,7 +881,7 @@
           overlay.setAttribute('aria-hidden', 'false');
           document.addEventListener('keydown', onKey);
           close.focus();
-        }, 2000);
+        }, 500);
       }());
     </script>
 </body>
