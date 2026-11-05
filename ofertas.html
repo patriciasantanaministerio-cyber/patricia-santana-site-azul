@@ -56,6 +56,28 @@
         rel="stylesheet"
         href="ofertas.css?v=10"
     >
+
+    <!-- AJUSTES EXCLUSIVOS DOS DOIS BLOCOS DE CONTRIBUIÇÃO -->
+    <style>
+        .ofertas-contribuicao-atualizada { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 28px !important; align-items: stretch; }
+        .ofertas-contribuicao-atualizada > .ofertas-card { min-width: 0; width: 100%; box-sizing: border-box; }
+        .ofertas-card-qr-novo { display: flex; flex-direction: column; }
+        .ofertas-qr-pendente { flex: 1; min-height: 215px; padding: 25px 20px; margin-top: 24px; border: 1px dashed #9fc7de; background: #f3f9fd; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; color: #174b78; }
+        .ofertas-qr-pendente-icone { font-size: 68px; line-height: 1; color: #1675ac; }
+        .ofertas-qr-pendente strong { font-size: 16px; }
+        .ofertas-qr-pendente span { font-size: 13px; line-height: 1.6; max-width: 280px; }
+        .ofertas-chave-nova { margin: 22px 0 10px; padding: 15px; border: 1px solid rgba(128,206,255,.55); border-radius: 8px; background: rgba(0,26,55,.23); }
+        .ofertas-chave-rotulo { display: block; margin-bottom: 10px; font-size: 10px; font-weight: 700; letter-spacing: 1.3px; color: #80d6ff; }
+        .ofertas-chave-linha { display: flex; align-items: center; gap: 10px; }
+        .ofertas-chave-linha strong { flex: 1; min-width: 0; overflow-wrap: anywhere; color: #fff; font-size: clamp(12px, 1.2vw, 15px); font-weight: 600; }
+        .ofertas-copiar-chave { flex: none; width: 39px; height: 39px; border: 1px solid #83d4ff; border-radius: 6px; background: rgba(255,255,255,.09); color: white; font-size: 24px; cursor: pointer; }
+        .ofertas-copiar-chave:hover, .ofertas-copiar-chave:focus-visible { background: #1675ac; }
+        .ofertas-banco-subtitulo { color: #fff; font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; margin: 30px 0 12px; }
+        .ofertas-contribuicao-atualizada .ofertas-dados-banco > div { grid-template-columns: minmax(85px, 1fr) minmax(0, 1.6fr) !important; }
+        .ofertas-contribuicao-atualizada .ofertas-dados-banco > div > strong { overflow-wrap: anywhere; }
+        .ofertas-dados-observacao { color: #b7d6eb; font-size: 11px; line-height: 1.65; margin-top: 20px; }
+        @media (max-width: 850px) { .ofertas-contribuicao-atualizada { grid-template-columns: 1fr !important; } .ofertas-chave-linha strong { font-size: 13px; } }
+    </style>
 </head>
 
 
@@ -238,284 +260,50 @@
                  ÁREA DE CONTRIBUIÇÃO
             ========================================= -->
 
-            <section class="ofertas-contribuicao">
+            <section class="ofertas-contribuicao ofertas-contribuicao-atualizada">
 
-
-                <!-- ====================================
-                     PIX
-                ===================================== -->
-
-                <article class="ofertas-card ofertas-card-pix">
-
+                <!-- BLOCO 1: QR CODE PIX -->
+                <article class="ofertas-card ofertas-card-pix ofertas-card-qr-novo">
                     <div class="ofertas-card-barra"></div>
+                    <p class="ofertas-card-kicker">CONTRIBUA VIA</p>
+                    <h2>QR Code PIX</h2>
+                    <p class="ofertas-card-texto">Para Dízimos e Ofertas</p>
 
-
-                    <p class="ofertas-card-kicker">
-                        CONTRIBUA VIA
-                    </p>
-
-                    <h2>
-                        PIX
-                    </h2>
-
-                    <p class="ofertas-card-texto">
-                        É rápido, seguro e você pode
-                        contribuir de qualquer lugar.
-                    </p>
-
-
-                    <div class="ofertas-pix-area">
-
-
-                        <!-- DADOS PIX -->
-
-                        <div class="ofertas-pix-dados">
-
-                            <label>
-                                CHAVE PIX
-                            </label>
-
-                            <div
-                                class="ofertas-campo"
-                                id="chavePix"
-                            >
-                                <span>
-                                    Em breve
-                                </span>
-
-                                <button
-                                    type="button"
-                                    class="ofertas-copiar-mini"
-                                    onclick="copiarPix()"
-                                    aria-label="Copiar chave PIX"
-                                >
-                                    ▣
-                                </button>
-
-                            </div>
-
-
-                            <button
-                                type="button"
-                                class="ofertas-botao ofertas-botao-pix"
-                                onclick="copiarPix()"
-                            >
-
-                                <span>
-                                    ▣
-                                </span>
-
-                                COPIAR CHAVE PIX
-
-                            </button>
-
-
-                            <p
-                                class="ofertas-aviso"
-                                id="avisoPix"
-                            >
-                                Chave PIX copiada.
-                            </p>
-
-                        </div>
-
-
-                        <!-- QR -->
-
-                        <div class="ofertas-qr">
-
-                            <div class="ofertas-qr-box">
-
-                                <div class="qr-canto qr-canto-1"></div>
-                                <div class="qr-canto qr-canto-2"></div>
-                                <div class="qr-canto qr-canto-3"></div>
-
-                                <div class="qr-centro">
-                                    QR
-                                </div>
-
-                                <span class="qr-ponto q1"></span>
-                                <span class="qr-ponto q2"></span>
-                                <span class="qr-ponto q3"></span>
-                                <span class="qr-ponto q4"></span>
-                                <span class="qr-ponto q5"></span>
-                                <span class="qr-ponto q6"></span>
-                                <span class="qr-ponto q7"></span>
-                                <span class="qr-ponto q8"></span>
-                                <span class="qr-ponto q9"></span>
-                                <span class="qr-ponto q10"></span>
-
-                            </div>
-
-                            <small>
-                                ESCANEIE O QR CODE
-                            </small>
-
-                        </div>
-
+                    <div class="ofertas-qr-pendente" aria-label="QR Code PIX ainda não disponível">
+                        <div class="ofertas-qr-pendente-icone" aria-hidden="true">▦</div>
+                        <strong>QR Code em preparação</strong>
+                        <span>Enquanto isso, utilize a chave PIX ao lado para contribuir.</span>
                     </div>
-
                 </article>
 
-
-                <!-- ====================================
-                     TRANSFERÊNCIA
-                ===================================== -->
-
-                <article class="ofertas-card ofertas-card-banco">
-
+                <!-- BLOCO 2: CHAVE PIX E DADOS BANCÁRIOS -->
+                <article class="ofertas-card ofertas-card-banco ofertas-card-dados-novo">
                     <div class="ofertas-card-barra"></div>
-
                     <div class="ofertas-banco-decoracao"></div>
-
-
                     <div class="ofertas-banco-conteudo">
+                        <p class="ofertas-card-kicker">CONTRIBUA COM SEGURANÇA</p>
+                        <h2>Chave PIX</h2>
+                        <p class="ofertas-card-texto">Copie a chave abaixo no aplicativo do seu banco.</p>
 
-                        <p class="ofertas-card-kicker">
-                            TRANSFERÊNCIA
-                        </p>
-
-                        <h2>
-                            BANCÁRIA
-                        </h2>
-
-                        <p class="ofertas-card-texto">
-                            Você também poderá contribuir
-                            através de transferência bancária.
-                        </p>
-
-
-                        <div class="ofertas-dados-banco">
-
-
-                            <div>
-
-                                <span>
-                                    BANCO
-                                </span>
-
-                                <strong>
-                                    Em breve
-                                </strong>
-
-                                <button
-                                    type="button"
-                                    aria-label="Copiar banco"
-                                >
-                                    ▣
-                                </button>
-
+                        <div class="ofertas-chave-nova">
+                            <span class="ofertas-chave-rotulo">CHAVE PIX · E-MAIL</span>
+                            <div class="ofertas-chave-linha">
+                                <strong id="chavePix">santanacarvalho234@gmail.com</strong>
+                                <button type="button" class="ofertas-copiar-chave" onclick="copiarPix()" aria-label="Copiar chave PIX" title="Copiar chave PIX">⧉</button>
                             </div>
-
-
-                            <div>
-
-                                <span>
-                                    AGÊNCIA
-                                </span>
-
-                                <strong>
-                                    Em breve
-                                </strong>
-
-                                <button
-                                    type="button"
-                                    aria-label="Copiar agência"
-                                >
-                                    ▣
-                                </button>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    CONTA CORRENTE
-                                </span>
-
-                                <strong>
-                                    Em breve
-                                </strong>
-
-                                <button
-                                    type="button"
-                                    aria-label="Copiar conta"
-                                >
-                                    ▣
-                                </button>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    FAVORECIDO
-                                </span>
-
-                                <strong>
-                                    Em breve
-                                </strong>
-
-                                <button
-                                    type="button"
-                                    aria-label="Copiar favorecido"
-                                >
-                                    ▣
-                                </button>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    CNPJ/CPF
-                                </span>
-
-                                <strong>
-                                    Em breve
-                                </strong>
-
-                                <button
-                                    type="button"
-                                    aria-label="Copiar documento"
-                                >
-                                    ▣
-                                </button>
-
-                            </div>
-
                         </div>
+                        <p class="ofertas-aviso" id="avisoPix" role="status" aria-live="polite">Chave PIX copiada!</p>
 
-
-                        <button
-                            type="button"
-                            class="ofertas-botao ofertas-botao-banco"
-                            onclick="copiarDadosBanco()"
-                        >
-
-                            <span>
-                                ▣
-                            </span>
-
-                            COPIAR DADOS BANCÁRIOS
-
-                        </button>
-
-
-                        <p
-                            class="ofertas-aviso"
-                            id="avisoBanco"
-                        >
-                            Dados bancários copiados.
-                        </p>
-
+                        <h3 class="ofertas-banco-subtitulo">Dados bancários</h3>
+                        <div class="ofertas-dados-banco">
+                            <div><span>BANCO</span><strong>Inter</strong></div>
+                            <div><span>AGÊNCIA</span><strong>A informar</strong></div>
+                            <div><span>CONTA</span><strong>A informar</strong></div>
+                            <div><span>FAVORECIDO</span><strong>A informar</strong></div>
+                        </div>
+                        <p class="ofertas-dados-observacao">Confira o nome do destinatário no aplicativo do banco antes de confirmar sua contribuição.</p>
                     </div>
-
                 </article>
-
             </section>
 
 
@@ -600,61 +388,36 @@
     ================================================= -->
 
     <script>
-
-        function mostrarAviso(id) {
-
+        function mostrarAviso(id, mensagem) {
             const aviso = document.getElementById(id);
-
-            if (!aviso) {
-                return;
-            }
-
-            aviso.classList.add("ativo");
-
-            setTimeout(function () {
-
-                aviso.classList.remove("ativo");
-
-            }, 2200);
-
+            if (!aviso) return;
+            if (mensagem) aviso.textContent = mensagem;
+            aviso.classList.add('ativo');
+            clearTimeout(aviso._temporizador);
+            aviso._temporizador = setTimeout(() => aviso.classList.remove('ativo'), 2500);
         }
 
-
-        function copiarPix() {
-
-            const chavePix = "Em breve";
-
-            if (navigator.clipboard) {
-
-                navigator.clipboard.writeText(chavePix);
-
+        async function copiarPix() {
+            const chavePix = 'santanacarvalho234@gmail.com';
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(chavePix);
+                } else {
+                    const campo = document.createElement('textarea');
+                    campo.value = chavePix;
+                    campo.style.position = 'fixed';
+                    campo.style.opacity = '0';
+                    document.body.appendChild(campo);
+                    campo.select();
+                    const copiado = document.execCommand('copy');
+                    campo.remove();
+                    if (!copiado) throw new Error('Não foi possível copiar');
+                }
+                mostrarAviso('avisoPix', 'Chave PIX copiada!');
+            } catch (erro) {
+                mostrarAviso('avisoPix', 'Não foi possível copiar. Selecione o e-mail acima para copiar.');
             }
-
-            mostrarAviso("avisoPix");
-
         }
-
-
-        function copiarDadosBanco() {
-
-            const dados = [
-                "Banco: Em breve",
-                "Agência: Em breve",
-                "Conta corrente: Em breve",
-                "Favorecido: Em breve",
-                "CNPJ/CPF: Em breve"
-            ].join("\n");
-
-            if (navigator.clipboard) {
-
-                navigator.clipboard.writeText(dados);
-
-            }
-
-            mostrarAviso("avisoBanco");
-
-        }
-
     </script>
 
 </body>
