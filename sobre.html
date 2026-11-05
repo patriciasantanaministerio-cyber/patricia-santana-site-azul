@@ -71,13 +71,31 @@
     </style>
 
 
-    <!-- Ajuste exclusivo para celular: foto antes da apresentação -->
+    <!-- Organização exclusiva para celular: título, foto, subtítulo e demais informações -->
     <style>
       @media (max-width: 700px) {
-        .pagina-sobre .sobre-hero-grid { display: flex !important; flex-direction: column !important; gap: 24px !important; }
-        .pagina-sobre .sobre-hero-grid > .sobre-photo { order: -1 !important; width: min(100%, 330px) !important; margin: 0 auto !important; align-self: center !important; }
-        .pagina-sobre .sobre-hero-grid > div:not(.sobre-photo) { order: 1 !important; width: 100% !important; min-width: 0 !important; }
+        .pagina-sobre .sobre-hero-grid {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 0 !important;
+        }
+        .pagina-sobre .sobre-hero-grid > .sobre-hero-copy {
+          display: contents !important;
+        }
+        .pagina-sobre .sobre-hero-grid .sobre-kicker { order: 1; }
+        .pagina-sobre .sobre-hero-grid .sobre-title { order: 2; margin-bottom: 20px; }
+        .pagina-sobre .sobre-hero-grid > .sobre-photo {
+          order: 3 !important;
+          width: min(100%, 330px) !important;
+          margin: 0 auto 24px !important;
+          align-self: center !important;
+        }
         .pagina-sobre .sobre-photo img { display: block; width: 100%; height: auto; }
+        .pagina-sobre .sobre-hero-grid .sobre-hero-sub { order: 4; }
+        .pagina-sobre .sobre-hero-grid .sobre-rule { order: 5; }
+        .pagina-sobre .sobre-hero-grid .sobre-hero-desc { order: 6; }
+        .pagina-sobre .sobre-hero-grid .sobre-ministerio { order: 7; }
+        .pagina-sobre .sobre-hero-grid .sobre-btn { order: 8; }
       }
     </style>
 </head>
@@ -109,7 +127,7 @@
         <div class="sobre-wrap sobre-hero-grid">
 
 
-            <div>
+            <div class="sobre-hero-copy">
 
                 <p class="sobre-kicker">
                     QUEM É A APÓSTOLA?
