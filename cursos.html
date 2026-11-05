@@ -657,12 +657,12 @@
   var popup=document.getElementById('seminario-float');
   var close=document.getElementById('seminario-float-close');
   if(!popup||!close)return;
-  // Respeita o fechamento do anúncio na página inicial nesta sessão.
-  var keys=['popup-cura-interior-v1','popup-cura-interior-float-v1'];
-  function closed(){try{return keys.some(function(k){return sessionStorage.getItem(k)==='closed'})}catch(e){return false}}
+  // O anúncio desta página funciona independentemente do pop-up da página inicial.
+  var key='popup-cura-interior-float-v2';
+  function closed(){try{return sessionStorage.getItem(key)==='closed'}catch(e){return false}}
   if(closed())return;
   var timer=window.setTimeout(function(){if(closed())return;popup.classList.add('is-visible');popup.setAttribute('aria-hidden','false')},1200);
-  close.addEventListener('click',function(){window.clearTimeout(timer);popup.classList.remove('is-visible');popup.setAttribute('aria-hidden','true');try{sessionStorage.setItem('popup-cura-interior-float-v1','closed')}catch(e){}});
+  close.addEventListener('click',function(){window.clearTimeout(timer);popup.classList.remove('is-visible');popup.setAttribute('aria-hidden','true');try{sessionStorage.setItem(key,'closed')}catch(e){}});
 })();
 </script>
 </body>
