@@ -14,9 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="css/header.css?v=5">
-<link rel="stylesheet" href="css/footer.css?v=6">
+
 <style>
 .biblioteca{background:#f7f8fc;color:#26344c;font-family:Montserrat,Arial,sans-serif;min-height:80vh}.biblioteca *{box-sizing:border-box}.biblioteca-hero{background:linear-gradient(135deg,#081b3b,#173a73);color:#fff;text-align:center;padding:85px 20px}.biblioteca-hero .eyebrow{color:#e3c58c;font-size:11px;letter-spacing:3px;font-weight:700}.biblioteca-hero h1{font:600 clamp(42px,6vw,68px)/1.1 'Cormorant Garamond',serif;margin:16px auto;max-width:800px}.biblioteca-hero h1 em{color:#e3c58c}.biblioteca-hero p{max-width:650px;margin:auto;font-size:14px;line-height:1.9;color:#e3e9f4}.biblioteca-container{max-width:1150px;margin:auto;padding:60px 20px 85px}.section-title{margin-bottom:27px}.section-title span{color:#9d7636;font-size:11px;letter-spacing:2px;font-weight:800}.section-title h2{font:600 clamp(34px,4vw,47px) 'Cormorant Garamond',serif;color:#102b59;margin:8px 0}.section-title p{font-size:13px;line-height:1.8}.library-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-bottom:64px}.library-card{background:#fff;border:1px solid #e7eaf0;border-radius:16px;padding:27px;box-shadow:0 10px 30px #0a20440d;display:flex;flex-direction:column;gap:14px}.library-card.featured{border:1px solid #e1d1b1;padding:0;overflow:hidden;display:grid;grid-template-columns:minmax(210px,330px) 1fr;gap:0;box-shadow:0 18px 50px #0a20441a;background:linear-gradient(120deg,#fff,#fbf7ef)}
 .book-art{padding:24px;background:linear-gradient(145deg,#0a234b,#163e78);display:flex;align-items:center;justify-content:center;position:relative}.book-art:before{content:"";position:absolute;inset:12px;border:1px solid #d8b77880;border-radius:10px;pointer-events:none}.book-art img{width:100%;max-width:255px;max-height:380px;object-fit:contain;filter:drop-shadow(0 14px 16px #0007);border-radius:3px}.book-info{padding:35px 34px;display:flex;flex-direction:column;justify-content:center;gap:16px}.book-info .kicker{font-size:10px;letter-spacing:2px;color:#96713c;font-weight:800}.book-info h3{font-size:clamp(35px,4vw,49px);line-height:1.06}.book-info .lead{font-size:14px;line-height:1.95;color:#4b5770}.book-details{display:flex;flex-wrap:wrap;gap:10px}.book-details span{border:1px solid #e6d8bd;border-radius:99px;padding:8px 12px;font-size:11px;color:#6c593d;font-weight:700}.book-info .buttons a{background:#b58a47;color:#101f3a;transition:transform .2s,background .2s}.book-info .buttons a:hover{background:#d6b574;transform:translateY(-2px)}.book-info .buttons a.alt{background:#102b59;color:#fff}.book-info .buttons a.alt:hover{background:#1c477f}
@@ -41,20 +39,50 @@
 .seminarios-grid .buttons{flex-direction:column}
 .seminarios-grid .buttons a{font-size:10px;min-height:40px}}
 
+
+html,body{margin:0;min-height:100%;background:#f7f8fc}
+body{font-family:Montserrat,Arial,sans-serif}
+.biblioteca-container{max-width:1250px;padding:20px 22px 80px}
+.app-header{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#0d2a50;color:#fff;padding:17px 22px;border-radius:15px}
+.app-brand{display:flex;align-items:center;gap:12px}.app-brand strong{display:block;font-size:17px}.app-brand small{display:block;font-size:10px;margin-top:4px;color:#c9d8e9}
+.app-mark{font-size:28px;color:#e7bd62}.app-home{background:#1b456f;color:#fff;text-decoration:none;border:1px solid #54708f;padding:11px 13px;border-radius:9px;font-size:12px;font-weight:700}
+.biblioteca-menu{padding:76px 10px 45px;text-align:center}.menu-kicker{color:#aa7c36;font-size:11px;font-weight:700;letter-spacing:2px}
+.biblioteca-menu h1{font:600 clamp(39px,5vw,60px)/1.1 'Cormorant Garamond',serif;color:#102b59;margin:14px 0}
+.menu-desc{font-size:13px;line-height:1.7;color:#53647b}
+.menu-opcoes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:850px;margin:36px auto}
+.menu-opcao{display:flex;align-items:center;flex-direction:column;gap:12px;border:1px solid #305b88;border-radius:15px;background:linear-gradient(145deg,#163d68,#0b2850);color:white;min-height:235px;padding:29px 18px;cursor:pointer;box-shadow:0 14px 28px #102b591a;font-family:Montserrat,Arial,sans-serif}
+.menu-opcao:hover,.menu-opcao:focus-visible{transform:translateY(-3px);box-shadow:0 18px 36px #102b592b;outline:2px solid #d5ad62;outline-offset:2px}
+.menu-icone{font-size:36px;color:#e9be64}.menu-opcao strong{font-size:18px}.menu-opcao small{font-size:11px;line-height:1.7;color:#d9e5f2;max-width:240px}.menu-arrow{font-size:11px;color:#f2cb79;font-weight:700;margin-top:auto}
+.voltar-menu{border:0;background:#102b59;color:#fff;border-radius:8px;padding:12px 16px;font:700 12px Montserrat,Arial,sans-serif;cursor:pointer;margin:30px 0}
+#biblioteca-conteudo[hidden],#painel-gratuitos[hidden],#painel-pagos[hidden],#biblioteca-menu[hidden]{display:none!important}
+@media(max-width:600px){.biblioteca-container{padding:10px 10px 45px}.app-header{padding:13px 12px}.app-brand strong{font-size:13px}.app-brand small{font-size:8px}.app-home{font-size:11px;padding:9px}.app-home span{display:none}.biblioteca-menu{padding:48px 6px 30px}.menu-opcoes{grid-template-columns:1fr;gap:14px;margin-top:26px}.menu-opcao{min-height:175px;padding:22px 15px}}
+@media(prefers-reduced-motion:reduce){.menu-opcao{transition:none!important}}
+
 </style>
 </head>
 <body>
-<div id="site-header-slot"></div>
+
 <main class="biblioteca">
-<section class="biblioteca-hero">
-<div class="eyebrow">FORMAÇÃO DE DISCÍPULOS</div>
-<h1>Biblioteca <em>Digital de Seminários</em></h1>
-<p>Um espaço dedicado ao conhecimento, ao crescimento espiritual e ao aprofundamento na Palavra de Deus.</p>
-<div class="biblioteca-install"><button type="button" class="biblioteca-install-button" id="biblioteca-install-button"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4"/><path d="M4 17v3h16v-3"/></svg>Adicionar à tela inicial</button></div>
-</section>
+
 <div class="biblioteca-container">
-<section aria-labelledby="free"><div class="section-title"><span>ACESSO LIVRE</span><h2 id="free">Materiais gratuitos</h2><p>Um convite para aprofundar sua caminhada espiritual. Escolha um material, leia no seu ritmo e volte sempre que desejar.</p></div><div class="library-grid"><article class="library-card featured"><div class="book-art"><img src="capa-21-dias-jejum.png" alt="Capa original do material 21 Dias de Jejum — Foco no Arrependimento e Alinhamento" loading="lazy"></div><div class="book-info"><span class="selo">GRATUITO · DISPONÍVEL</span><span class="kicker">UMA JORNADA DE FÉ E REFLEXÃO</span><h3>21 Dias de Jejum</h3><p class="lead">Foco no Arrependimento e Alinhamento. Reserve um momento para a Palavra, a oração e o exame pessoal. Avance em cada página no seu próprio ritmo e retome a leitura quando desejar.</p><div class="book-details"><span>📖 Leitura interativa</span><span>✦ 7 páginas</span><span>♡ Acesso gratuito</span></div><div class="buttons"><a href="leitor-jejum.html">📖 Começar a leitura</a><a class="alt" href="21-dias-de-jejum.pdf" download>↓ Baixar PDF</a></div></div></article></div></section>
-<section aria-labelledby="paid">
+<header class="app-header">
+  <div class="app-brand"><span class="app-mark">▣</span><div><strong>Biblioteca Digital</strong><small>Ministério Apostólico Patrícia Santana</small></div></div>
+  <a class="app-home" href="https://www.apostolapatriciasantana.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir site oficial em nova aba">⌂ <span>Site oficial</span> ↗</a>
+</header>
+<section id="biblioteca-menu" class="biblioteca-menu" aria-label="Escolha o conteúdo">
+  <p class="menu-kicker">BEM-VINDO À BIBLIOTECA DIGITAL</p>
+  <h1>O que deseja explorar?</h1>
+  <p class="menu-desc">Selecione uma das opções para acessar os conteúdos do ministério.</p>
+  <div class="menu-opcoes">
+    <button type="button" onclick="abrirBiblioteca('gratuitos')" class="menu-opcao"><span class="menu-icone">▤</span><strong>Materiais Gratuitos</strong><small>Leituras e conteúdos para sua caminhada espiritual</small><span class="menu-arrow">Explorar →</span></button>
+    <button type="button" onclick="abrirBiblioteca('pagos')" class="menu-opcao"><span class="menu-icone">◇</span><strong>Seminários Pagos</strong><small>Conheça os seminários e saiba como se inscrever</small><span class="menu-arrow">Conhecer →</span></button>
+  </div>
+</section>
+<div id="biblioteca-conteudo" hidden>
+  <button type="button" class="voltar-menu" onclick="abrirBiblioteca('menu')">← Voltar à Biblioteca</button>
+
+<section id="painel-gratuitos" aria-labelledby="free" hidden><div class="section-title"><span>ACESSO LIVRE</span><h2 id="free">Materiais gratuitos</h2><p>Um convite para aprofundar sua caminhada espiritual. Escolha um material, leia no seu ritmo e volte sempre que desejar.</p></div><div class="library-grid"><article class="library-card featured"><div class="book-art"><img src="capa-21-dias-jejum.png" alt="Capa original do material 21 Dias de Jejum — Foco no Arrependimento e Alinhamento" loading="lazy"></div><div class="book-info"><span class="selo">GRATUITO · DISPONÍVEL</span><span class="kicker">UMA JORNADA DE FÉ E REFLEXÃO</span><h3>21 Dias de Jejum</h3><p class="lead">Foco no Arrependimento e Alinhamento. Reserve um momento para a Palavra, a oração e o exame pessoal. Avance em cada página no seu próprio ritmo e retome a leitura quando desejar.</p><div class="book-details"><span>📖 Leitura interativa</span><span>✦ 7 páginas</span><span>♡ Acesso gratuito</span></div><div class="buttons"><a href="leitor-jejum.html">📖 Começar a leitura</a><a class="alt" href="21-dias-de-jejum.pdf" download>↓ Baixar PDF</a></div></div></article></div></section>
+<section id="painel-pagos" aria-labelledby="paid" hidden>
 <div class="section-title">
 <span>FORMAÇÃO E APROFUNDAMENTO</span>
 <h2 id="paid">Seminários com inscrição</h2>
@@ -97,10 +125,10 @@
 </article></div>
 </section>
 <aside class="notice"><strong>Como acessar os materiais?</strong><p>Os materiais gratuitos estão disponíveis para leitura e download. Os seminários com inscrição terão acesso individual após a confirmação do pagamento; os arquivos restritos não estão publicados nesta página.</p><p>Para informações sobre inscrições, <a href="https://wa.me/5571982862604?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20semin%C3%A1rios." target="_blank" rel="noopener noreferrer">fale com a equipe pelo WhatsApp</a>.</p></aside>
-</div></main>
-<div id="site-footer-slot"></div>
+</div></div></main>
+
 <dialog class="biblioteca-dialog" id="biblioteca-install-dialog" aria-labelledby="biblioteca-install-title"><div class="biblioteca-dialog-inner"><h2 id="biblioteca-install-title">Adicionar Biblioteca Digital</h2><div id="biblioteca-install-instructions" aria-live="polite"></div><button type="button" class="biblioteca-close" id="biblioteca-install-close">Entendi</button></div></dialog>
-<script src="js/components.js?v=6"></script>
+
 <script>
 (function () {
   'use strict';
@@ -164,6 +192,18 @@
   close.addEventListener('click', function () { dialog.close(); });
   dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
 })();
+</script>
+<script>
+function abrirBiblioteca(destino){
+ const menu=document.getElementById('biblioteca-menu');
+ const area=document.getElementById('biblioteca-conteudo');
+ const gratuitos=document.getElementById('painel-gratuitos');
+ const pagos=document.getElementById('painel-pagos');
+ menu.hidden=destino!=='menu';area.hidden=destino==='menu';
+ gratuitos.hidden=destino!=='gratuitos';pagos.hidden=destino!=='pagos';
+ window.scrollTo({top:0,behavior:'instant'});
+}
+abrirBiblioteca('menu');
 </script>
 </body>
 </html>
