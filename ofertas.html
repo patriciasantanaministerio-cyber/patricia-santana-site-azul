@@ -69,12 +69,14 @@
         .ofertas-chave-nova { margin: 22px 0 10px; padding: 15px; border: 1px solid rgba(128,206,255,.55); border-radius: 8px; background: rgba(0,26,55,.23); }
         .ofertas-chave-rotulo { display: block; margin-bottom: 10px; font-size: 10px; font-weight: 700; letter-spacing: 1.3px; color: #80d6ff; }
         .ofertas-chave-linha { display: flex; align-items: center; gap: 10px; }
-        .ofertas-chave-linha strong { flex: 1; min-width: 0; overflow-wrap: anywhere; color: #fff; font-size: clamp(12px, 1.2vw, 15px); font-weight: 600; }
+        .ofertas-chave-linha strong { flex: 1; min-width: 0; overflow-wrap: anywhere; color: #fff; font-family: 'Montserrat', sans-serif; font-size: clamp(13px, 1.2vw, 15px); font-weight: 400; }
         .ofertas-copiar-chave { flex: none; width: 39px; height: 39px; border: 1px solid #83d4ff; border-radius: 6px; background: rgba(255,255,255,.09); color: white; font-size: 24px; cursor: pointer; }
         .ofertas-copiar-chave:hover, .ofertas-copiar-chave:focus-visible { background: #1675ac; }
         .ofertas-banco-subtitulo { color: #fff; font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; margin: 30px 0 12px; }
         .ofertas-contribuicao-atualizada .ofertas-dados-banco > div { grid-template-columns: minmax(85px, 1fr) minmax(0, 1.6fr) !important; }
-        .ofertas-contribuicao-atualizada .ofertas-dados-banco > div > strong { overflow-wrap: anywhere; }
+        .ofertas-contribuicao-atualizada .ofertas-dados-banco > div > strong { overflow-wrap: anywhere; font-family: 'Montserrat', sans-serif !important; font-size: 14px !important; font-weight: 500 !important; line-height: 1.6 !important; }
+        .ofertas-contribuicao-atualizada .ofertas-dados-banco > div > span { font-family: 'Montserrat', sans-serif !important; font-size: 12px !important; font-weight: 600 !important; letter-spacing: .4px !important; line-height: 1.6 !important; }
+        .ofertas-contribuicao-atualizada .ofertas-dados-banco > div { min-height: 45px; gap: 12px; align-items: center; }
         .ofertas-dados-observacao { color: #b7d6eb; font-size: 11px; line-height: 1.65; margin-top: 20px; }
         @media (max-width: 850px) { .ofertas-contribuicao-atualizada { grid-template-columns: 1fr !important; } .ofertas-chave-linha strong { font-size: 13px; } }
     </style>
