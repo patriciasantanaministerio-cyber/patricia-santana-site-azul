@@ -77,6 +77,14 @@ body{font-family:Montserrat,Arial,sans-serif}
 @media(max-width:600px){.biblioteca-menu{padding:30px 3px 20px}.biblioteca-menu h1{font-size:clamp(35px,10vw,46px)}.menu-opcoes{margin:20px auto 24px}.menu-opcao{min-height:145px;padding:18px 12px;gap:8px}.menu-icone{font-size:28px}.menu-opcao strong{font-size:16px}.home-feature{grid-template-columns:100px minmax(0,1fr);gap:12px;padding:12px;border-radius:12px}.home-feature-cover{padding:6px}.home-feature-cover img{max-height:155px}.home-feature-copy h2{font-size:26px;margin:6px 0}.home-feature-copy p{font-size:10px;line-height:1.55;margin-bottom:9px}.home-feature-eyebrow{font-size:8px;letter-spacing:.5px}.home-feature-link{font-size:10px;padding:9px 10px;min-height:38px}.home-verse{margin-top:22px}.home-verse p{font-size:19px}}
 @media(max-width:360px){.home-feature{grid-template-columns:85px minmax(0,1fr)}.home-feature-copy h2{font-size:23px}}
 
+
+.seminario-janela{position:fixed;inset:0;z-index:999999;background:#f7f8fc;display:none;flex-direction:column}
+.seminario-janela.ativa{display:flex}
+.seminario-janela-barra{background:#0d2a50;color:white;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;min-height:62px;box-sizing:border-box}
+.seminario-janela-barra strong{font-size:14px}
+.seminario-voltar{border:1px solid #cba85e;background:#173e69;color:#fff;border-radius:9px;padding:11px 15px;font:700 12px Montserrat,Arial,sans-serif;cursor:pointer}
+.seminario-janela iframe{width:100%;flex:1;border:0;background:white}
+@media(max-width:600px){.seminario-janela-barra{padding:10px;min-height:56px}.seminario-janela-barra strong{font-size:11px}.seminario-voltar{font-size:11px;padding:10px}}
 </style>
 </head>
 <body>
@@ -122,38 +130,38 @@ body{font-family:Montserrat,Arial,sans-serif}
   <span class="selo paid">ACESSO RESTRITO</span>
   <h3>Cura Interior</h3>
   <p>Restauração emocional e fortalecimento espiritual.</p>
-  <div class="buttons"><a href="cura-interior.html">Conhecer seminário</a></div>
+  <div class="buttons"><a href="cura-interior.html" class="abrir-seminario" data-titulo="Cura Interior">Conhecer seminário</a></div>
 </article>
 <article class="library-card seminario-card">
   <img class="seminario-capa" src="/trono-lilith.png" alt="Imagem do seminário Trono de Lilith" loading="lazy">
   <span class="selo paid">ACESSO RESTRITO</span>
   <h3>Trono de Lilith</h3>
   <p>Aprofundamento em batalha espiritual.</p>
-  <div class="buttons"><a href="trono-lilith.html">Conhecer seminário</a></div>
+  <div class="buttons"><a href="trono-lilith.html" class="abrir-seminario" data-titulo="Trono Lilith">Conhecer seminário</a></div>
 </article>
 <article class="library-card seminario-card">
   <img class="seminario-capa" src="/trono-mamon.png" alt="Imagem do seminário Trono de Mamon" loading="lazy">
   <span class="selo paid">ACESSO RESTRITO</span>
   <h3>Trono de Mamon</h3>
   <p>Estudo de princípios espirituais.</p>
-  <div class="buttons"><a href="trono-mamon.html">Conhecer seminário</a></div>
+  <div class="buttons"><a href="trono-mamon.html" class="abrir-seminario" data-titulo="Trono Mamon">Conhecer seminário</a></div>
 </article>
 <article class="library-card seminario-card">
   <img class="seminario-capa" src="/batalha-espiritual.png" alt="Imagem do seminário Batalha Espiritual" loading="lazy">
   <span class="selo paid">ACESSO RESTRITO</span>
   <h3>Batalha Espiritual</h3>
   <p>Fundamentos para o fortalecimento espiritual.</p>
-  <div class="buttons"><a href="batalha-espiritual.html">Conhecer seminário</a></div>
+  <div class="buttons"><a href="batalha-espiritual.html" class="abrir-seminario" data-titulo="Batalha Espiritual">Conhecer seminário</a></div>
 </article>
 <article class="library-card seminario-card">
   <img class="seminario-capa" src="/trono-belial.png" alt="Imagem do seminário Trono de Belial" loading="lazy">
   <span class="selo paid">ACESSO RESTRITO</span>
   <h3>Trono de Belial</h3>
   <p>Aprofundamento em batalha espiritual.</p>
-  <div class="buttons"><a href="trono-belial.html">Conhecer seminário</a></div>
+  <div class="buttons"><a href="trono-belial.html" class="abrir-seminario" data-titulo="Trono Belial">Conhecer seminário</a></div>
 </article></div>
 </section>
-<aside class="notice"><strong>Como acessar os materiais?</strong><p>Os materiais gratuitos estão disponíveis para leitura e download. Os seminários com inscrição terão acesso individual após a confirmação do pagamento; os arquivos restritos não estão publicados nesta página.</p><p>Para informações sobre inscrições, <a href="https://wa.me/5571982862604?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20semin%C3%A1rios." target="_blank" rel="noopener noreferrer">fale com a equipe pelo WhatsApp</a>.</p></aside>
+<aside class="notice"><strong>Como acessar os materiais?</strong><p>Os materiais gratuitos estão disponíveis para leitura e download. Os seminários com inscrição terão acesso individual após a confirmação do pagamento; os arquivos restritos não estão publicados nesta página.</p><p>Para informações sobre inscrições, <a href="https://wa.me/5514997656818?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20semin%C3%A1rios." target="_blank" rel="noopener noreferrer">fale com a equipe pelo WhatsApp</a>.</p></aside>
 </div></div></main>
 
 <dialog class="biblioteca-dialog" id="biblioteca-install-dialog" aria-labelledby="biblioteca-install-title"><div class="biblioteca-dialog-inner"><h2 id="biblioteca-install-title">Adicionar Biblioteca Digital</h2><div id="biblioteca-install-instructions" aria-live="polite"></div><button type="button" class="biblioteca-close" id="biblioteca-install-close">Entendi</button></div></dialog>
@@ -233,6 +241,38 @@ function abrirBiblioteca(destino){
  window.scrollTo({top:0,behavior:'instant'});
 }
 abrirBiblioteca('menu');
+</script>
+<div id="seminario-janela" class="seminario-janela" role="dialog" aria-modal="true" aria-label="Detalhes do seminário" aria-hidden="true">
+  <div class="seminario-janela-barra">
+    <strong id="seminario-janela-titulo">Conhecer seminário</strong>
+    <button type="button" class="seminario-voltar" id="seminario-janela-voltar">← Voltar à Biblioteca</button>
+  </div>
+  <iframe id="seminario-janela-frame" title="Detalhes do seminário"></iframe>
+</div>
+<script>
+(function(){
+  const janela=document.getElementById('seminario-janela');
+  const frame=document.getElementById('seminario-janela-frame');
+  const titulo=document.getElementById('seminario-janela-titulo');
+  const voltar=document.getElementById('seminario-janela-voltar');
+  let anterior=null;
+  function fechar(){
+    janela.classList.remove('ativa');janela.setAttribute('aria-hidden','true');
+    frame.removeAttribute('src');document.body.style.overflow='';
+    if(anterior) anterior.focus();
+  }
+  document.querySelectorAll('a.abrir-seminario').forEach(link=>{
+    link.addEventListener('click',event=>{
+      event.preventDefault();anterior=link;
+      titulo.textContent=link.dataset.titulo||'Conhecer seminário';
+      frame.src=link.getAttribute('href');
+      janela.classList.add('ativa');janela.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';voltar.focus();
+    });
+  });
+  voltar.addEventListener('click',fechar);
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&janela.classList.contains('ativa'))fechar();});
+})();
 </script>
 </body>
 </html>
