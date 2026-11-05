@@ -119,8 +119,13 @@
         height: auto;
         object-fit: contain;
       }
+      /* Aproximar a assinatura da moldura sem alterar a fotografia */
+      .hero .hero-art .assinatura-apostola { margin: -14px auto 0 !important; }
       @media (max-width: 650px) {
-        .hero .hero-art .assinatura-apostola { width: min(185px, 100%) !important; }
+        .hero .hero-art .assinatura-apostola {
+          width: min(185px, 100%) !important;
+          margin: -12px auto 0 !important;
+        }
       }
     </style>
 
