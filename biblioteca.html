@@ -91,6 +91,12 @@ body{font-family:Montserrat,Arial,sans-serif}
 .seminario-cadeado svg{width:21px;height:21px;fill:none;stroke:#092b54;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .seminario-cadeado svg circle{fill:#092b54;stroke:none}
 @media(max-width:600px){.seminario-cadeado{width:31px;height:31px}.seminario-cadeado svg{width:18px;height:18px}}
+/* Cadeado compacto ao lado do selo, sem alterar os demais cartões */
+.seminarios-grid .seminario-restricao{display:flex;align-items:center;justify-content:flex-start;gap:6px;flex-wrap:nowrap}
+.seminarios-grid .seminario-restricao .seminario-cadeado{width:21px;height:21px;min-width:21px;margin:0;border-radius:50%;box-shadow:0 1px 4px #12385b24}
+.seminarios-grid .seminario-restricao .seminario-cadeado svg{width:13px;height:13px}
+.seminarios-grid .seminario-restricao .selo.paid{align-self:center;white-space:nowrap;margin:0}
+@media(max-width:600px){.seminarios-grid .seminario-restricao{gap:4px}.seminarios-grid .seminario-restricao .seminario-cadeado{width:18px;height:18px;min-width:18px}.seminarios-grid .seminario-restricao .seminario-cadeado svg{width:11px;height:11px}}
 </style>
 </head>
 <body>
@@ -133,40 +139,35 @@ body{font-family:Montserrat,Arial,sans-serif}
 </div>
 <div class="seminarios-grid"><article class="library-card seminario-card">
   <img class="seminario-capa" src="/cura-interior.png" alt="Imagem do seminário Cura Interior" loading="lazy">
-  <span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span>
-  <span class="selo paid">ACESSO RESTRITO</span>
+  <div class="seminario-restricao"><span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span><span class="selo paid">ACESSO RESTRITO</span></div>
   <h3>Cura Interior</h3>
   <p>Restauração emocional e fortalecimento espiritual.</p>
   <div class="buttons"><a href="cura-interior.html" class="abrir-seminario" data-titulo="Cura Interior">Conhecer seminário</a></div>
 </article>
 <article class="library-card seminario-card">
   <img class="seminario-capa" src="/trono-lilith.png" alt="Imagem do seminário Trono de Lilith" loading="lazy">
-  <span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span>
-  <span class="selo paid">ACESSO RESTRITO</span>
+  <div class="seminario-restricao"><span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span><span class="selo paid">ACESSO RESTRITO</span></div>
   <h3>Trono de Lilith</h3>
   <p>Aprofundamento em batalha espiritual.</p>
   <div class="buttons"><a href="trono-lilith.html" class="abrir-seminario" data-titulo="Trono Lilith">Conhecer seminário</a></div>
 </article>
 <article class="library-card seminario-card">
   <img class="seminario-capa" src="/trono-mamon.png" alt="Imagem do seminário Trono de Mamon" loading="lazy">
-  <span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span>
-  <span class="selo paid">ACESSO RESTRITO</span>
+  <div class="seminario-restricao"><span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span><span class="selo paid">ACESSO RESTRITO</span></div>
   <h3>Trono de Mamon</h3>
   <p>Estudo de princípios espirituais.</p>
   <div class="buttons"><a href="trono-mamon.html" class="abrir-seminario" data-titulo="Trono Mamon">Conhecer seminário</a></div>
 </article>
 <article class="library-card seminario-card">
   <img class="seminario-capa" src="/batalha-espiritual.png" alt="Imagem do seminário Batalha Espiritual" loading="lazy">
-  <span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span>
-  <span class="selo paid">ACESSO RESTRITO</span>
+  <div class="seminario-restricao"><span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span><span class="selo paid">ACESSO RESTRITO</span></div>
   <h3>Batalha Espiritual</h3>
   <p>Fundamentos para o fortalecimento espiritual.</p>
   <div class="buttons"><a href="batalha-espiritual.html" class="abrir-seminario" data-titulo="Batalha Espiritual">Conhecer seminário</a></div>
 </article>
 <article class="library-card seminario-card">
   <img class="seminario-capa" src="/trono-belial.png" alt="Imagem do seminário Trono de Belial" loading="lazy">
-  <span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span>
-  <span class="selo paid">ACESSO RESTRITO</span>
+  <div class="seminario-restricao"><span class="seminario-cadeado" role="img" aria-label="Material de acesso restrito"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg></span><span class="selo paid">ACESSO RESTRITO</span></div>
   <h3>Trono de Belial</h3>
   <p>Aprofundamento em batalha espiritual.</p>
   <div class="buttons"><a href="trono-belial.html" class="abrir-seminario" data-titulo="Trono Belial">Conhecer seminário</a></div>
